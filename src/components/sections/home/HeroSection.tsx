@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full bg-[#FDF7F1] py-12 sm:py-20 md:py-28 px-5 sm:px-8 overflow-hidden">
+    <section className="relative w-full bg-[#FDF7F1] py-12 sm:py-20 md:py-24 px-5 sm:px-8 overflow-hidden">
       {/* Soft blush-100 radial background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FBE7EC] rounded-full blur-3xl opacity-60 pointer-events-none" />
 
@@ -59,29 +59,30 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Column: Decorative Olive Leaf & Soft Blob Art */}
-        <div className="lg:col-span-5 relative hidden lg:flex items-center justify-center min-h-[420px]">
-          <div className="absolute inset-0 bg-[#FBE7EC] rounded-[32px] transform rotate-3 shadow-warm opacity-80" />
-          <div className="absolute inset-0 bg-[#F7EDE3] rounded-[32px] transform -rotate-2 border-2 border-[#D5DEC6]" />
-          
-          <div className="relative z-10 p-8 text-center flex flex-col items-center justify-center">
-            {/* SVG Decorative Motif inspired by logo leaves */}
-            <svg
-              className="w-40 h-40 text-[#9CAF88] mb-6 opacity-90"
-              viewBox="0 0 100 100"
-              fill="none"
-              stroke="currentColor"
-            >
-              <circle cx="50" cy="50" r="38" stroke="#7D2352" strokeWidth="2" strokeDasharray="4 4" fill="#FDF7F1" />
-              <path d="M50 20 C35 35 35 65 50 80 C65 65 65 35 50 20 Z" fill="#9CAF88" opacity="0.25" stroke="#9CAF88" strokeWidth="2" />
-              <path d="M30 50 C40 40 60 40 70 50 C60 60 40 60 30 50 Z" fill="#DDB380" opacity="0.3" stroke="#B5703A" strokeWidth="1.5" />
-            </svg>
-            <p className="font-serif text-2xl font-bold text-[#5E1A3D] mb-1">
-              "स्वप्नातील बाळ सत्यात"
-            </p>
-            <p className="text-sm text-[#9CAF88] font-semibold tracking-wider uppercase">
-              Astitva Garbhsanskar
-            </p>
+        {/* Right Column: Elegant Organic Logo Display */}
+        <div className="lg:col-span-5 relative hidden lg:flex items-center justify-center">
+          <div className="relative w-full max-w-[380px] aspect-square flex flex-col items-center justify-center p-8 text-center">
+            {/* Soft Organic Circle Halo */}
+            <div className="absolute inset-0 bg-[#FBE7EC] rounded-full blur-xl opacity-70" />
+            <div className="absolute inset-4 bg-[#F7EDE3] rounded-full shadow-warm border border-[#F2C0CD]" />
+            
+            <div className="relative z-10 flex flex-col items-center justify-center p-4">
+              <div className="relative w-48 h-48 mb-4">
+                <Image
+                  src="/images/logo.png"
+                  alt="Astitva Garbhsanskar Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <p className="font-serif text-xl font-bold text-[#5E1A3D] mb-1">
+                "{siteConfig.tagline}"
+              </p>
+              <p className="text-xs text-[#9CAF88] font-bold tracking-widest uppercase">
+                {siteConfig.taglineEn}
+              </p>
+            </div>
           </div>
         </div>
       </div>
