@@ -11,7 +11,7 @@ export const FloatingWhatsApp: React.FC = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-[60px] h-[60px] bg-[#4CA771] text-white rounded-full flex items-center justify-center shadow-warm-lg transition-transform duration-300 hover:scale-110 active:scale-95 animate-pulse-ring focus-visible:outline-2 focus-visible:outline-white"
+      className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 w-[60px] h-[60px] bg-[#2E7D47] text-white rounded-full flex items-center justify-center shadow-warm-lg transition-transform duration-300 hover:scale-110 active:scale-95 animate-pulse-ring focus-visible:outline-3 focus-visible:outline-white cursor-pointer"
       aria-label="Chat with Astitva Garbhsanskar on WhatsApp"
       title="Chat on WhatsApp"
     >
