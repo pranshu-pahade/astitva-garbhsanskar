@@ -6,17 +6,17 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const SessionGlimpseSection: React.FC = () => {
   const sessionImages = [
     {
-      src: "/images/pooja.jpeg",
+      src: "/images/pooja.webp",
       title: "Vaidik Sanskar & Pooja Rituals",
       caption: "Spiritual connection through auspicious mantras, lamps, and Garbha Pooja.",
     },
     {
-      src: "/images/activity1.jpeg",
+      src: "/images/activity1.webp",
       title: "Interactive Daily Activities",
       caption: "Mindful creative exercises, music therapy, and stories shared live together.",
     },
     {
-      src: "/images/activity2.jpeg",
+      src: "/images/activity2.webp",
       title: "Prenatal Yoga & Pranayam",
       caption: "Gentle postures tailored for pregnancy to keep your body strong, flexible, and pain-free.",
     },
@@ -49,7 +49,7 @@ export const SessionGlimpseSection: React.FC = () => {
               <h3 className="font-serif text-lg font-bold text-[#5E1A3D] mb-2 leading-snug">
                 {img.title}
               </h3>
-              <p className="text-sm text-[#4A3B42] leading-relaxed">
+              <p className="text-sm text-[#36292E] leading-relaxed">
                 {img.caption}
               </p>
             </div>

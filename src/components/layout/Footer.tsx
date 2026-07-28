@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 flex-shrink-0 bg-[#FDF7F1] rounded-full p-1">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt="Astitva Garbhsanskar Logo"
                   fill
                   className="object-contain p-1"

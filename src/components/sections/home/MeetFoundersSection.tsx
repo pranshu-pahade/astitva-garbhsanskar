@@ -22,7 +22,7 @@ export const MeetFoundersSection: React.FC = () => {
           
           <div className="relative max-w-[400px] w-full aspect-[679/906] rounded-[24px] overflow-hidden shadow-warm-lg border-4 border-[#FDF7F1]">
             <Image
-              src="/images/founders.jpg"
+              src="/images/founders.webp"
               alt="Founders Prajakta Dhamane and Minal Purkar in sarees"
               fill
               className="object-cover object-top"
@@ -40,7 +40,7 @@ export const MeetFoundersSection: React.FC = () => {
             className="mb-6"
           />
 
-          <p className="text-base sm:text-lg text-[#4A3B42] leading-relaxed mb-6">
+          <p className="text-base sm:text-lg text-[#36292E] leading-relaxed mb-6">
             Astitva Garbhsanskar was born out of our own family's pregnancy journey in Pune, where we saw firsthand how traditional wisdom transforms a mother's calm and a newborn's health. We combine authentic Vaidik sanskars with scientific medical yoga therapy so every mother feels supported, understood, and deeply connected to her baby. As two women founders, we personally lead every single session and hold your hand through every month of pregnancy and baby care.
           </p>
 
@@ -49,7 +49,7 @@ export const MeetFoundersSection: React.FC = () => {
             {credentials.map((pill, idx) => (
               <span
                 key={idx}
-                className="px-3.5 py-1.5 rounded-full bg-[#D5DEC6] text-[#5E1A3D] text-xs sm:text-sm font-bold shadow-warm-sm"
+                className="px-3.5 py-1.5 rounded-full bg-[#D5DEC6] text-[#4A1230] text-xs sm:text-sm font-bold shadow-warm-sm"
               >
                 {pill}
               </span>

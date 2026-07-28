@@ -42,7 +42,7 @@ export const HeroSection: React.FC = () => {
           <div className="flex items-center gap-4 p-3 pr-6 rounded-full bg-[#F7EDE3] border border-[#F2C0CD] shadow-warm-sm">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#7D2352] flex-shrink-0">
               <Image
-                src="/images/founders.jpg"
+                src="/images/founders.webp"
                 alt="Prajakta Dhamane and Minal Purkar"
                 fill
                 className="object-cover object-top"
@@ -69,7 +69,7 @@ export const HeroSection: React.FC = () => {
             <div className="relative z-10 flex flex-col items-center justify-center p-4">
               <div className="relative w-48 h-48 mb-4">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt="Astitva Garbhsanskar Logo"
                   fill
                   className="object-contain"

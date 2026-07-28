@@ -8,22 +8,22 @@ export const WhatsAppLightbox: React.FC = () => {
 
   const whatsappImages = [
     {
-      src: "/images/whatsapp_feedback1.jpeg",
+      src: "/images/whatsapp_feedback1.webp",
       alt: "WhatsApp feedback screenshot 1",
       tilt: "-rotate-2",
     },
     {
-      src: "/images/whatsapp_feedback2.jpeg",
+      src: "/images/whatsapp_feedback2.webp",
       alt: "WhatsApp feedback screenshot 2",
       tilt: "rotate-1",
     },
     {
-      src: "/images/whatsapp_feedback3.jpeg",
+      src: "/images/whatsapp_feedback3.webp",
       alt: "WhatsApp feedback screenshot 3",
       tilt: "-rotate-1",
     },
     {
-      src: "/images/whatsapp_feedback4.jpeg",
+      src: "/images/whatsapp_feedback4.webp",
       alt: "WhatsApp feedback screenshot 4",
       tilt: "rotate-2",
     },

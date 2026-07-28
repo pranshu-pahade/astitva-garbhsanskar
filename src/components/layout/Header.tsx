@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 flex-shrink-0">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Astitva Garbhsanskar Logo"
               fill
               className="object-contain transition-transform group-hover:scale-105"

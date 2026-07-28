@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     "vedic garbhsanskar",
   ],
   authors: [{ name: "Astitva Garbhsanskar" }],
+  alternates: {
+    canonical: "https://astitvagarbhsanskar.com",
+  },
   openGraph: {
     title: "Astitva Garbhsanskar — Live Online Prenatal Wellness",
     description:
@@ -97,7 +100,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#FDF7F1] text-[#4A3B42] selection:bg-[#F2C0CD] selection:text-[#5E1A3D]">
+      <body className="min-h-full flex flex-col bg-[#FDF7F1] text-[#36292E] selection:bg-[#5E1A3D] selection:text-[#FDF7F1]">
         <Header />
         <main className="flex-1 pb-16 sm:pb-0">{children}</main>
         <Footer />
@@ -123,4 +126,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-};
+}
