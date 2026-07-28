@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum-900: #4A1230;
+  --color-plum-800: #5E1A3D;
+  --color-plum-600: #7D2352;
+  --color-berry-500: #9B2C6F;
+  --color-blush-300: #F2C0CD;
+  --color-blush-100: #FBE7EC;
+  --color-sage-500: #9CAF88;
+  --color-sage-200: #D5DEC6;
+  --color-tan-400: #DDB380;
+  --color-tan-600: #B5703A;
+  --color-peach-200: #F7C9AC;
+  --color-cream-50: #FDF7F1;
+  --color-cream-100: #F7EDE3;
+  --color-ink-700: #4A3B42;
+  --color-whatsapp: #4CA771;
+
+  --font-fraunces: var(--font-fraunces), serif;
+  --font-nunito-sans: var(--font-nunito-sans), sans-serif;
+}
+
+:root {
+  --font-heading: var(--font-fraunces), serif;
+  --font-body: var(--font-nunito-sans), sans-serif;
+  --color-plum-900: #4A1230;
+  --color-plum-800: #5E1A3D;
+  --color-plum-600: #7D2352;
+  --color-berry-500: #9B2C6F;
+  --color-blush-300: #F2C0CD;
+  --color-blush-100: #FBE7EC;
+  --color-sage-500: #9CAF88;
+  --color-sage-200: #D5DEC6;
+  --color-tan-400: #DDB380;
+  --color-tan-600: #B5703A;
+  --color-peach-200: #F7C9AC;
+  --color-cream-50: #FDF7F1;
+  --color-cream-100: #F7EDE3;
+  --color-ink-700: #4A3B42;
+  --color-whatsapp: #4CA771;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FDF7F1;
+}
+
+body {
+  background-color: #FDF7F1;
+  color: #4A3B42;
+  font-family: var(--font-body);
+  line-height: 1.7;
+  font-size: clamp(17px, 1.1vw + 14px, 20px);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: #5E1A3D;
+}
+
+/* Warm tinted shadows */
+.shadow-warm {
+  box-shadow: 0 8px 30px rgba(94, 26, 61, 0.08);
+}
+
+.shadow-warm-lg {
+  box-shadow: 0 16px 40px rgba(94, 26, 61, 0.12);
+}
+
+.shadow-warm-sm {
+  box-shadow: 0 4px 14px rgba(94, 26, 61, 0.06);
+}
+
+/* Focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid #9CAF88;
+  outline-offset: 3px;
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(76, 167, 113, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(76, 167, 113, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(76, 167, 113, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.5s infinite;
+}
+
+/* Scroll Fade Up animation respecting prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-up-scroll {
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF7F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #F2C0CD;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CAF88;
+}
