@@ -108,7 +108,7 @@ export default async function Image() {
             <span>•</span>
             <span>Prajakta Dhamane & Minal Purkar</span>
             <span>•</span>
-            <span>Pune, India</span>
+            <span>Online Live Across India</span>
           </div>
         </div>
       </div>

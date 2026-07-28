@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Contact Us & FAQ — Book a Free Demo",
   description:
-    "Have questions about Garbhsanskar? Contact Prajakta Dhamane & Minal Purkar on WhatsApp or book a free live demo session in Pune.",
+    "Have questions about Garbhsanskar? Contact Prajakta Dhamane & Minal Purkar on WhatsApp or book a free live demo session.",
 };
 
 const faqItems = [
@@ -85,10 +85,10 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column: Enquiry Form */}
           <div className="lg:col-span-7">
-            <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-4">
+            <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-4">
               Send Us an Enquiry
             </h3>
-            <p className="text-sm text-[#4A3B42] mb-6">
+            <p className="text-sm text-[#36292E] opacity-90 mb-6">
               Fill out this form to request a free live demo or inquire about batch availability.
             </p>
             <EnquiryForm />
@@ -96,24 +96,24 @@ export default function ContactPage() {
 
           {/* Right Column: Direct Contact Info */}
           <div className="lg:col-span-5">
-            <Card bgColor="bg-[#F7EDE3]" className="p-8 border border-[#F2C0CD] space-y-6">
-              <h3 className="font-serif text-2xl font-bold text-[#5E1A3D]">
+            <Card bgColor="bg-[#FFF6EE]" className="p-8 border border-[#F3B6B2] space-y-6">
+              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C]">
                 Direct Contact
               </h3>
 
               {/* Tap to Call */}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-4 p-4 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#5E1A3D] hover:border-[#9CAF88] transition-colors shadow-warm-sm group"
+                className="flex items-center gap-4 p-4 rounded-xl bg-[#FFF6EE] border border-[#F3B6B2] text-[#8E2B5C] hover:border-[#9CAF8A] transition-colors shadow-warm-sm group"
               >
-                <div className="w-12 h-12 rounded-full bg-[#FBE7EC] text-[#7D2352] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-[#FCECE9] text-[#8E2B5C] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 transition-transform">
                   📞
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#9CAF88] block">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#3A5E2E] block">
                     Call Us Directly
                   </span>
-                  <span className="font-serif text-xl font-bold text-[#5E1A3D]">
+                  <span className="font-serif text-xl font-bold text-[#8E2B5C]">
                     {siteConfig.phoneDisplay}
                   </span>
                 </div>
@@ -124,9 +124,9 @@ export default function ContactPage() {
                 href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi,%20I'd%20like%20to%20know%20more%20about%20Astitva%20Garbhsanskar.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-xl bg-[#4CA771] text-white hover:bg-[#3D8B5D] transition-colors shadow-warm-sm group"
+                className="flex items-center gap-4 p-4 rounded-xl bg-[#2E7D47] text-white hover:bg-[#246338] transition-colors shadow-warm-sm group"
               >
-                <div className="w-12 h-12 rounded-full bg-white text-[#4CA771] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-white text-[#2E7D47] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 transition-transform">
                   💬
                 </div>
                 <div>
@@ -145,27 +145,27 @@ export default function ContactPage() {
                   href={siteConfig.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#5E1A3D] hover:border-[#9CAF88] transition-colors shadow-warm-sm group"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-[#FFF6EE] border border-[#F3B6B2] text-[#8E2B5C] hover:border-[#9CAF8A] transition-colors shadow-warm-sm group"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#FBE7EC] text-[#9B2C6F] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-[#FCECE9] text-[#8E2B5C] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 transition-transform">
                     📸
                   </div>
                   <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#9CAF88] block">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#3A5E2E] block">
                       Instagram Page
                     </span>
-                    <span className="font-bold text-base text-[#5E1A3D]">
+                    <span className="font-bold text-base text-[#8E2B5C]">
                       @astitva_garbhasanskar
                     </span>
                   </div>
                 </a>
               )}
 
-              <div className="pt-4 border-t border-[#F2C0CD] text-center">
-                <span className="text-xs font-bold text-[#9CAF88] uppercase tracking-wider block">
+              <div className="pt-4 border-t border-[#F3B6B2] text-center">
+                <span className="text-xs font-bold text-[#3A5E2E] uppercase tracking-wider block">
                   ⚡ Response Time
                 </span>
-                <p className="text-sm text-[#4A3B42] font-semibold mt-1">
+                <p className="text-sm text-[#36292E] font-semibold mt-1">
                   We usually reply within a few hours!
                 </p>
               </div>
@@ -186,17 +186,17 @@ export default function ContactPage() {
       </Section>
 
       {/* 4. Closing CTA */}
-      <section className="w-full bg-[#4A1230] text-[#FDF7F1] py-16 px-5 sm:px-8 text-center">
+      <section className="w-full bg-[#8E2B5C] text-[#FFF6EE] py-16 px-5 sm:px-8 text-center">
         <div className="max-w-2xl mx-auto">
-          <LeafDivider color="#F2C0CD" className="mb-6 opacity-75" />
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FDF7F1] mb-4">
+          <LeafDivider color="#F3B6B2" className="mb-6 opacity-80" />
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FFF6EE] mb-4">
             Still unsure? Come sit in on a free demo.
           </h2>
-          <p className="text-base sm:text-lg text-[#F2C0CD] mb-8">
+          <p className="text-base sm:text-lg text-[#FCECE9] mb-8">
             Experience our 45-minute live class without any commitment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="#contact-info" variant="primary" size="lg">
+            <Button href="#contact-info" variant="light" size="lg">
               Book a Free Demo
             </Button>
             <Button
@@ -205,7 +205,7 @@ export default function ContactPage() {
               size="lg"
               external
             >
-              Chat on WhatsApp
+              WhatsApp Us
             </Button>
           </div>
         </div>

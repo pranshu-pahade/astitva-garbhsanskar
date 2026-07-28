@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Our Program & Daily Sessions — Live Garbhsanskar Zoom Classes",
   description:
-    "Explore the 45-minute daily Zoom sessions by Astitva Garbhsanskar in Pune. Live yoga, Geeta & Ramraksha paath, music therapy, Vaidik sanskars, and batch timings.",
+    "Explore the 45-minute daily Zoom sessions by Astitva Garbhsanskar. Live yoga, Geeta & Ramraksha paath, music therapy, Vaidik sanskars, and batch timings.",
 };
 
 export default function ProgramPage() {
@@ -100,16 +100,16 @@ export default function ProgramPage() {
       <Section bgColor="cream-50" id="curriculum">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {programBlocks.map((block, idx) => (
-            <Card key={idx} bgColor="bg-[#F7EDE3]" className="flex flex-col justify-between p-6 sm:p-8 border border-[#F2C0CD]">
+            <Card key={idx} bgColor="bg-[#FFF6EE]" className="flex flex-col justify-between p-6 sm:p-8 border border-[#F3B6B2]">
               <div>
                 <div className="text-4xl mb-4">{block.icon}</div>
-                <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-6 border-b border-[#F2C0CD] pb-3">
+                <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-6 border-b border-[#F3B6B2] pb-3">
                   {block.title}
                 </h3>
                 <ul className="space-y-3.5 mb-6">
                   {block.items.map((item, itemIdx) => (
-                    <li key={itemIdx} className="flex items-start gap-3 text-sm sm:text-base text-[#4A3B42]">
-                      <span className="w-5 h-5 rounded-full bg-[#9CAF88] text-white flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">
+                    <li key={itemIdx} className="flex items-start gap-3 text-sm sm:text-base text-[#36292E]">
+                      <span className="w-5 h-5 rounded-full bg-[#3A5E2E] text-white flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">
                         ✓
                       </span>
                       <span>{item}</span>
@@ -132,21 +132,21 @@ export default function ProgramPage() {
 
         <div className="relative max-w-5xl mx-auto py-4">
           {/* Connector Line for Desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 border-t-2 border-dashed border-[#9CAF88] -translate-y-1/2 z-0" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 border-t-2 border-dashed border-[#9CAF8A] -translate-y-1/2 z-0" />
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 relative z-10">
             {timelineStops.map((stop, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center bg-[#FDF7F1] p-6 rounded-[16px] shadow-warm border border-[#F2C0CD]">
-                <div className="w-10 h-10 rounded-full bg-[#7D2352] text-[#FDF7F1] font-serif font-bold text-lg flex items-center justify-center mb-3 shadow-warm-sm border-2 border-[#FDF7F1]">
+              <div key={idx} className="flex flex-col items-center text-center bg-[#FFF6EE] p-6 rounded-[16px] shadow-warm border border-[#F3B6B2]">
+                <div className="w-10 h-10 rounded-full bg-[#8E2B5C] text-[#FFF6EE] font-serif font-bold text-lg flex items-center justify-center mb-3 shadow-warm-sm border-2 border-[#FFF6EE]">
                   {idx + 1}
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#9CAF88] mb-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#3A5E2E] mb-1">
                   {stop.stage}
                 </span>
-                <h4 className="font-serif text-lg font-bold text-[#5E1A3D] mb-2 leading-snug">
+                <h4 className="font-serif text-lg font-bold text-[#8E2B5C] mb-2 leading-snug">
                   {stop.title}
                 </h4>
-                <p className="text-xs text-[#4A3B42] leading-relaxed">
+                <p className="text-xs text-[#36292E] opacity-90 leading-relaxed">
                   {stop.desc}
                 </p>
               </div>
@@ -164,21 +164,21 @@ export default function ProgramPage() {
         />
 
         {/* Desktop Table View */}
-        <div className="hidden sm:block max-w-3xl mx-auto bg-[#FDF7F1] rounded-[16px] overflow-hidden shadow-warm border border-[#F2C0CD] mb-6">
+        <div className="hidden sm:block max-w-3xl mx-auto bg-[#FFF6EE] rounded-[16px] overflow-hidden shadow-warm border border-[#F3B6B2] mb-6">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-[#FBE7EC] border-b border-[#F2C0CD] text-[#7D2352]">
+              <tr className="bg-[#FCECE9] border-b border-[#F3B6B2] text-[#8E2B5C]">
                 <th className="py-4 px-6 font-serif text-lg font-bold">Batch Name</th>
                 <th className="py-4 px-6 font-serif text-lg font-bold">Time Slot</th>
                 <th className="py-4 px-6 font-serif text-lg font-bold">Duration</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#F7EDE3]">
+            <tbody className="divide-y divide-[#FCECE9]">
               {siteConfig.batchTimings.map((batch, idx) => (
-                <tr key={idx} className="hover:bg-[#F7EDE3]/50 transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#5E1A3D]">{batch.name}</td>
-                  <td className="py-4 px-6 text-[#4A3B42] font-semibold">{batch.time}</td>
-                  <td className="py-4 px-6 text-[#9CAF88] font-bold">{batch.duration}</td>
+                <tr key={idx} className="hover:bg-[#FCECE9]/50 transition-colors">
+                  <td className="py-4 px-6 font-bold text-[#8E2B5C]">{batch.name}</td>
+                  <td className="py-4 px-6 text-[#36292E] font-semibold">{batch.time}</td>
+                  <td className="py-4 px-6 text-[#3A5E2E] font-bold">{batch.duration}</td>
                 </tr>
               ))}
             </tbody>
@@ -188,17 +188,17 @@ export default function ProgramPage() {
         {/* Mobile Card View */}
         <div className="sm:hidden grid grid-cols-1 gap-4 mb-6">
           {siteConfig.batchTimings.map((batch, idx) => (
-            <Card key={idx} bgColor="bg-[#FDF7F1]" className="p-5 border border-[#F2C0CD]">
-              <h4 className="font-serif text-lg font-bold text-[#5E1A3D] mb-1">
+            <Card key={idx} bgColor="bg-[#FFF6EE]" className="p-5 border border-[#F3B6B2]">
+              <h4 className="font-serif text-lg font-bold text-[#8E2B5C] mb-1">
                 {batch.name}
               </h4>
-              <p className="text-base font-bold text-[#7D2352] mb-1">{batch.time}</p>
-              <p className="text-xs text-[#9CAF88] font-semibold">{batch.duration} live session</p>
+              <p className="text-base font-bold text-[#8E2B5C] mb-1">{batch.time}</p>
+              <p className="text-xs text-[#3A5E2E] font-semibold">{batch.duration} live session</p>
             </Card>
           ))}
         </div>
 
-        <p className="text-center text-sm font-semibold text-[#7D2352] bg-[#FBE7EC] max-w-md mx-auto py-2.5 px-4 rounded-full border border-[#F2C0CD]">
+        <p className="text-center text-sm font-semibold text-[#8E2B5C] bg-[#FCECE9] max-w-md mx-auto py-2.5 px-4 rounded-full border border-[#F3B6B2]">
           📌 Sessions run 6 days a week — Sundays off for rest.
         </p>
       </Section>
@@ -213,18 +213,18 @@ export default function ProgramPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-6">
           {/* Monthly */}
-          <Card bgColor="bg-[#FDF7F1]" className="p-8 border border-[#F2C0CD] flex flex-col justify-between">
+          <Card bgColor="bg-[#FFF6EE]" className="p-8 border border-[#F3B6B2] flex flex-col justify-between">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#9CAF88] mb-2 block">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#3A5E2E] mb-2 block">
                 MONTHLY PLAN
               </span>
-              <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-3">
+              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
                 Monthly Subscription
               </h3>
-              <div className="font-serif text-4xl font-bold text-[#7D2352] mb-4">
-                {siteConfig.priceMonthly} <span className="text-sm font-sans text-[#4A3B42] font-normal">/ month</span>
+              <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
+                {siteConfig.priceMonthly} <span className="text-sm font-sans text-[#36292E] font-normal">/ month</span>
               </div>
-              <ul className="space-y-2.5 text-sm text-[#4A3B42] mb-6">
+              <ul className="space-y-2.5 text-sm text-[#36292E] mb-6">
                 <li>✓ Access to all 3 daily Zoom batches</li>
                 <li>✓ Daily live yoga & pranayam</li>
                 <li>✓ Geeta & Ramraksha recitations</li>
@@ -237,21 +237,21 @@ export default function ProgramPage() {
           </Card>
 
           {/* Full Package */}
-          <Card bgColor="bg-[#FDF7F1]" className="p-8 border-2 border-[#7D2352] relative shadow-warm-lg flex flex-col justify-between">
-            <div className="absolute -top-3.5 right-6 bg-[#F2C0CD] text-[#7D2352] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+          <Card bgColor="bg-[#FFF6EE]" className="p-8 border-2 border-[#8E2B5C] relative shadow-warm-lg flex flex-col justify-between">
+            <div className="absolute -top-3.5 right-6 bg-[#F3B6B2] text-[#8E2B5C] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
               Best Value
             </div>
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#7D2352] mb-2 block">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#8E2B5C] mb-2 block">
                 FULL 3RD–9TH MONTH PACKAGE
               </span>
-              <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-3">
+              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
                 Complete Pregnancy Journey
               </h3>
-              <div className="font-serif text-4xl font-bold text-[#7D2352] mb-4">
-                {siteConfig.pricePackage} <span className="text-sm font-sans text-[#4A3B42] font-normal">(one-time)</span>
+              <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
+                {siteConfig.pricePackage} <span className="text-sm font-sans text-[#36292E] font-normal">(one-time)</span>
               </div>
-              <ul className="space-y-2.5 text-sm text-[#4A3B42] mb-6">
+              <ul className="space-y-2.5 text-sm text-[#36292E] mb-6">
                 <li>✓ Full coverage from 3rd month through delivery</li>
                 <li>✓ Save ₹3,100 compared to paying monthly</li>
                 <li>✓ Special festival & Purnima workshops included</li>
@@ -264,12 +264,12 @@ export default function ProgramPage() {
           </Card>
         </div>
 
-        <p className="text-center text-sm text-[#4A3B42] italic">
+        <p className="text-center text-sm text-[#36292E] opacity-90 italic">
           💚 No online payment required upfront. We will explain payment options calmly on WhatsApp.
         </p>
       </Section>
 
-      {/* 6. See a Real Session (Video Embed if non-empty) */}
+      {/* 6. See a Real Session */}
       {siteConfig.feedbackVideoUrl && (
         <Section bgColor="cream-50" id="video">
           <SectionHeading
@@ -278,7 +278,7 @@ export default function ProgramPage() {
             subtitle="Watch how Prajakta & Minal guide mothers gently during live Zoom sessions."
           />
 
-          <div className="max-w-3xl mx-auto rounded-[16px] overflow-hidden shadow-warm-lg border-4 border-[#FDF7F1] bg-[#FBE7EC] aspect-video relative">
+          <div className="max-w-3xl mx-auto rounded-[16px] overflow-hidden shadow-warm-lg border-4 border-[#FFF6EE] bg-[#FCECE9] aspect-video relative">
             <iframe
               src={siteConfig.feedbackVideoUrl.replace("youtu.be/", "www.youtube.com/embed/").replace("watch?v=", "embed/")}
               title="Astitva Garbhsanskar Demo Session"
@@ -291,7 +291,7 @@ export default function ProgramPage() {
         </Section>
       )}
 
-      {/* 7. How to Join (5 Numbered Steps) */}
+      {/* 7. How to Join */}
       <Section bgColor="blush-100" id="how-to-join">
         <SectionHeading
           eyebrow="EASY 5-STEP PROCESS"
@@ -300,14 +300,14 @@ export default function ProgramPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
           {stepsToJoin.map((step) => (
-            <Card key={step.num} bgColor="bg-[#FDF7F1]" className="p-5 text-center flex flex-col items-center border border-[#F2C0CD]">
-              <div className="w-12 h-12 rounded-full bg-[#7D2352] text-[#FDF7F1] font-serif font-bold text-xl flex items-center justify-center mb-3 shadow-warm-sm">
+            <Card key={step.num} bgColor="bg-[#FFF6EE]" className="p-5 text-center flex flex-col items-center border border-[#F3B6B2]">
+              <div className="w-12 h-12 rounded-full bg-[#8E2B5C] text-[#FFF6EE] font-serif font-bold text-xl flex items-center justify-center mb-3 shadow-warm-sm">
                 {step.num}
               </div>
-              <h4 className="font-serif text-lg font-bold text-[#5E1A3D] mb-1">
+              <h4 className="font-serif text-lg font-bold text-[#8E2B5C] mb-1">
                 {step.title}
               </h4>
-              <p className="text-xs text-[#4A3B42] leading-relaxed">
+              <p className="text-xs text-[#36292E] opacity-90 leading-relaxed">
                 {step.text}
               </p>
             </Card>

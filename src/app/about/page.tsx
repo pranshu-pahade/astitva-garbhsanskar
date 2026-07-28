@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Us & Founders — Prajakta Dhamane & Minal Purkar",
   description:
-    "Learn about Astitva Garbhsanskar in Pune, founded by Prajakta Dhamane & Minal Purkar. Combining traditional Vaidik Garbhsanskar with modern yoga therapy.",
+    "Learn about Astitva Garbhsanskar, founded by Prajakta Dhamane & Minal Purkar. Combining traditional Vaidik Garbhsanskar with modern yoga therapy.",
 };
 
 export default function AboutPage() {
@@ -41,15 +41,14 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="OUR STORY & JOURNEY"
           title="Astitva began in our own family."
-          subtitle="How two women in Pune turned a personal family experience into a supportive sanctuary for expecting mothers."
+          subtitle="How two women turned a personal family experience into a supportive sanctuary for expecting mothers."
         />
       </Section>
 
-      {/* 2. The Story (Single Column, Max 680px) */}
+      {/* 2. The Story */}
       <Section bgColor="cream-50" className="py-16">
         <div className="max-w-[680px] mx-auto space-y-6 text-base sm:text-lg text-[#36292E] leading-relaxed">
-          {/* TODO: Swap in real story copy if client provides updated narrative */}
-          <p className="font-serif text-xl sm:text-2xl text-[#5E1A3D] font-bold leading-snug">
+          <p className="font-serif text-xl sm:text-2xl text-[#8E2B5C] font-bold leading-snug">
             "When pregnancy entered our own household, we realized how overwhelming and lonely it can feel for a mother."
           </p>
 
@@ -62,7 +61,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            In July 2025, we established Astitva Garbhsanskar in Pune to share this gift with every expecting mother. Since then, we have personally guided over 150 mothers from their 3rd month of pregnancy all the way through delivery and newborn care.
+            In July 2025, we established Astitva Garbhsanskar to share this gift with every expecting mother. Since then, we have personally guided over 150 mothers from their 3rd month of pregnancy all the way through delivery and newborn care.
           </p>
         </div>
       </Section>
@@ -77,8 +76,8 @@ export default function AboutPage() {
 
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           {/* ONE Shared Photo */}
-          <div className="relative w-full max-w-[450px] aspect-[679/906] rounded-[24px] overflow-hidden shadow-warm-lg border-4 border-[#FDF7F1] mb-12">
-            <div className="absolute inset-0 bg-[#F2C0CD] rounded-[24px] transform rotate-2 -z-10" />
+          <div className="relative w-full max-w-[450px] aspect-[679/906] rounded-[24px] overflow-hidden shadow-warm-lg border-4 border-[#FFF6EE] mb-12">
+            <div className="absolute inset-0 bg-[#F3B6B2] rounded-[24px] transform rotate-2 -z-10" />
             <Image
               src="/images/founders.webp"
               alt="Prajakta Dhamane and Minal Purkar together in sarees"
@@ -92,42 +91,42 @@ export default function AboutPage() {
           {/* Two Name Blocks Side by Side on Desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
             {/* Prajakta Dhamane */}
-            <Card bgColor="bg-[#FDF7F1]" className="flex flex-col items-start border border-[#F2C0CD]">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#4A6338] mb-1">
+            <Card bgColor="bg-[#FFF6EE]" className="flex flex-col items-start border border-[#F3B6B2]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#3A5E2E] mb-1">
                 CO-FOUNDER & LEAD YOGA THERAPIST
               </span>
-              <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-3">
+              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
                 Prajakta Dhamane
               </h3>
               <p className="text-sm text-[#36292E] leading-relaxed mb-6">
                 Specializes in prenatal medical yoga therapy, posture adjustments, and breathwork for smooth labor preparation.
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
-                <span className="px-3 py-1 rounded-full bg-[#D5DEC6] text-[#4A1230] text-xs font-bold">
+                <span className="px-3 py-1 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs font-bold">
                   M.A. Yogashastra
                 </span>
-                <span className="px-3 py-1 rounded-full bg-[#D5DEC6] text-[#4A1230] text-xs font-bold">
+                <span className="px-3 py-1 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs font-bold">
                   Medical Yoga Therapist
                 </span>
               </div>
             </Card>
 
             {/* Minal Purkar */}
-            <Card bgColor="bg-[#FDF7F1]" className="flex flex-col items-start border border-[#F2C0CD]">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#4A6338] mb-1">
+            <Card bgColor="bg-[#FFF6EE]" className="flex flex-col items-start border border-[#F3B6B2]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#3A5E2E] mb-1">
                 CO-FOUNDER & GARBHSANSKAR EDUCATOR
               </span>
-              <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-3">
+              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
                 Minal Purkar
               </h3>
               <p className="text-sm text-[#36292E] leading-relaxed mb-6">
                 Leads Vaidik Garbha sanskars, Geeta & Ramraksha paath, womb music therapy, and emotional bonding practices.
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
-                <span className="px-3 py-1 rounded-full bg-[#D5DEC6] text-[#4A1230] text-xs font-bold">
+                <span className="px-3 py-1 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs font-bold">
                   MSc Qualified
                 </span>
-                <span className="px-3 py-1 rounded-full bg-[#D5DEC6] text-[#4A1230] text-xs font-bold">
+                <span className="px-3 py-1 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs font-bold">
                   Certified Garbhsanskar Educator
                 </span>
               </div>
@@ -145,13 +144,13 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {missionPoints.map((item, idx) => (
-            <Card key={idx} bgColor="bg-[#F7EDE3]" className="flex flex-col items-start p-6">
-              <div className="w-10 h-10 rounded-xl bg-[#D5DEC6] flex items-center justify-center text-[#5E1A3D] mb-4 shadow-warm-sm">
+            <Card key={idx} bgColor="bg-[#FFF6EE]" className="flex flex-col items-start p-6 border border-[#F3B6B2]">
+              <div className="w-10 h-10 rounded-xl bg-[#E2EAD8] flex items-center justify-center text-[#8E2B5C] mb-4 shadow-warm-sm">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
               </div>
-              <h3 className="font-serif text-lg font-bold text-[#5E1A3D] mb-2 leading-snug">
+              <h3 className="font-serif text-lg font-bold text-[#8E2B5C] mb-2 leading-snug">
                 {item.title}
               </h3>
               <p className="text-sm text-[#36292E] leading-relaxed">
@@ -165,16 +164,16 @@ export default function AboutPage() {
       {/* 5. A Personal Note */}
       <Section bgColor="blush-100" id="personal-note">
         <div className="max-w-2xl mx-auto">
-          <div className="rounded-[16px] p-8 sm:p-12 bg-[#F7EDE3] border-l-8 border-[#8C4E1D] shadow-warm-lg">
-            <h3 className="font-serif text-xl font-bold text-[#7D2352] mb-4 uppercase tracking-wider text-xs">
+          <div className="rounded-[16px] p-8 sm:p-12 bg-[#FFF6EE] border-l-8 border-[#D4A373] shadow-warm-lg">
+            <h3 className="font-serif text-xl font-bold text-[#8E2B5C] mb-4 uppercase tracking-wider text-xs">
               A Personal Note to Every Mother
             </h3>
 
-            <p className="font-serif italic text-lg sm:text-xl text-[#5E1A3D] leading-relaxed mb-6">
+            <p className="font-serif italic text-lg sm:text-xl text-[#8E2B5C] leading-relaxed mb-6">
               "Dear Mother, pregnancy is not a period of fear or confinement. It is your baby's very first school and your most sacred journey. Take a deep breath, trust your body, and let us walk beside you every single morning."
             </p>
 
-            <div className="flex justify-end font-serif font-bold text-lg text-[#7D2352]">
+            <div className="flex justify-end font-serif font-bold text-lg text-[#8E2B5C]">
               — Prajakta & Minal
             </div>
           </div>
@@ -182,17 +181,17 @@ export default function AboutPage() {
       </Section>
 
       {/* 6. Closing CTA */}
-      <section className="w-full bg-[#4A1230] text-[#FDF7F1] py-16 px-5 sm:px-8 text-center">
+      <section className="w-full bg-[#8E2B5C] text-[#FFF6EE] py-16 px-5 sm:px-8 text-center">
         <div className="max-w-2xl mx-auto">
-          <LeafDivider color="#F2C0CD" className="mb-6 opacity-75" />
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FDF7F1] mb-4">
+          <LeafDivider color="#F3B6B2" className="mb-6 opacity-80" />
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FFF6EE] mb-4">
             Come meet us in a free demo session.
           </h2>
-          <p className="text-base sm:text-lg text-[#F2C0CD] mb-8">
+          <p className="text-base sm:text-lg text-[#FCECE9] mb-8">
             Experience our 45-minute live class, interact with Prajakta & Minal, and feel the difference.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/contact" variant="primary" size="lg">
+            <Button href="/contact" variant="light" size="lg">
               Book a Free Demo
             </Button>
             <Button
@@ -201,7 +200,7 @@ export default function AboutPage() {
               size="lg"
               external
             >
-              Chat on WhatsApp
+              WhatsApp Us
             </Button>
           </div>
         </div>

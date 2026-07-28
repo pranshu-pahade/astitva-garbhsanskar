@@ -29,12 +29,11 @@ export const metadata: Metadata = {
     template: "%s | Astitva Garbhsanskar",
   },
   description:
-    "Live online Garbhsanskar classes guided by Prajakta Dhamane & Minal Purkar in Pune. Yoga, pranayam, mantra, Geeta & Ramraksha paath, and Vaidik sanskars from 3rd month of pregnancy.",
+    "Live online Garbhsanskar classes guided by Prajakta Dhamane & Minal Purkar. Yoga, pranayam, mantra, Geeta & Ramraksha paath, and Vaidik sanskars from 3rd month of pregnancy.",
   keywords: [
     "garbhsanskar online",
     "live garbhsanskar classes",
     "prenatal yoga India",
-    "garbhsanskar Pune",
     "Prajakta Dhamane",
     "Minal Purkar",
     "pregnancy yoga online",
@@ -66,7 +65,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "Astitva Garbhsanskar",
-    description: "Live online Garbhsanskar and prenatal wellness sessions in Pune, India.",
+    description: "Live online Garbhsanskar and prenatal wellness sessions.",
     url: "https://astitvagarbhsanskar.com",
     telephone: siteConfig.phoneDisplay,
     founder: [
@@ -83,8 +82,6 @@ export default function RootLayout({
     ],
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Pune",
-      addressRegion: "Maharashtra",
       addressCountry: "IN",
     },
     sameAs: [siteConfig.instagramUrl].filter(Boolean),
