@@ -48,7 +48,7 @@ export const WhatsAppLightbox: React.FC = () => {
                 sizes="(max-width: 768px) 75vw, 25vw"
               />
               <div className="absolute inset-0 bg-[#5E1A3D]/0 hover:bg-[#5E1A3D]/10 transition-colors flex items-center justify-center">
-                <span className="bg-[#5E1A3D]/80 text-[#FDF7F1] px-3 py-1 rounded-full text-xs font-bold opacity-0 hover:opacity-100 transition-opacity">
+                <span className="bg-[#5E1A3D]/90 text-[#FDF7F1] px-3 py-1 rounded-full text-xs font-bold opacity-0 hover:opacity-100 transition-opacity">
                   Tap to expand 🔍
                 </span>
               </div>
@@ -57,7 +57,7 @@ export const WhatsAppLightbox: React.FC = () => {
         ))}
       </div>
 
-      <p className="text-center text-xs font-bold tracking-wider text-[#9CAF88] uppercase mt-4">
+      <p className="text-center text-xs font-bold tracking-wider text-[#4A6338] uppercase mt-4">
         🔒 Shared with permission from mothers
       </p>
 

@@ -66,13 +66,13 @@ export const ReviewForm: React.FC = () => {
   if (isSuccess) {
     return (
       <div className="rounded-[16px] bg-[#FBE7EC] p-8 text-center border-2 border-[#F2C0CD] shadow-warm max-w-xl mx-auto">
-        <div className="w-14 h-14 rounded-full bg-[#9CAF88] text-white flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+        <div className="w-14 h-14 rounded-full bg-[#4A6338] text-white flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
           ✓
         </div>
         <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-3">
           Thank you, {name}!
         </h3>
-        <p className="text-base text-[#4A3B42] leading-relaxed">
+        <p className="text-base text-[#36292E] leading-relaxed">
           Thank you — your words will help another mother. We'll publish this shortly.
         </p>
       </div>
@@ -102,9 +102,9 @@ export const ReviewForm: React.FC = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="e.g. Sneha Patil"
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] placeholder-[#9CAF88] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] placeholder-[#6B5B62] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base"
         />
-        {errors.name && <p className="text-xs font-semibold text-[#B5703A] mt-1">{errors.name}</p>}
+        {errors.name && <p className="text-xs font-semibold text-[#8C4E1D] mt-1">{errors.name}</p>}
       </div>
 
       {/* Pregnancy Month */}
@@ -116,7 +116,7 @@ export const ReviewForm: React.FC = () => {
           id="review-month"
           value={pregnancyMonth}
           onChange={(e) => setPregnancyMonth(e.target.value)}
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base cursor-pointer"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base cursor-pointer"
         >
           {Array.from({ length: 9 }).map((_, i) => (
             <option key={i + 1} value={i + 1}>
@@ -145,7 +145,7 @@ export const ReviewForm: React.FC = () => {
               <span
                 className={
                   star <= (hoverRating || rating)
-                    ? "text-[#B5703A]"
+                    ? "text-[#8C4E1D]"
                     : "text-[#D5DEC6]"
                 }
               >
@@ -154,7 +154,7 @@ export const ReviewForm: React.FC = () => {
             </button>
           ))}
         </div>
-        {errors.rating && <p className="text-xs font-semibold text-[#B5703A] mt-1">{errors.rating}</p>}
+        {errors.rating && <p className="text-xs font-semibold text-[#8C4E1D] mt-1">{errors.rating}</p>}
       </div>
 
       {/* Message */}
@@ -163,7 +163,7 @@ export const ReviewForm: React.FC = () => {
           <label htmlFor="review-message" className="block text-sm font-bold text-[#5E1A3D]">
             Your Experience & Words <span className="text-[#7D2352]">*</span>
           </label>
-          <span className={`text-xs font-semibold ${message.length > 800 ? "text-[#B5703A]" : "text-[#9CAF88]"}`}>
+          <span className={`text-xs font-semibold ${message.length > 800 ? "text-[#8C4E1D]" : "text-[#4A6338]"}`}>
             {message.length} / 800 chars
           </span>
         </div>
@@ -173,9 +173,9 @@ export const ReviewForm: React.FC = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Share how the sessions helped your mind, body, and baby..."
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] placeholder-[#9CAF88] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] placeholder-[#6B5B62] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base resize-none"
         />
-        {errors.message && <p className="text-xs font-semibold text-[#B5703A] mt-1">{errors.message}</p>}
+        {errors.message && <p className="text-xs font-semibold text-[#8C4E1D] mt-1">{errors.message}</p>}
       </div>
 
       <Button

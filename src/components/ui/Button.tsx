@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-bold transition-all duration-200 rounded-full min-h-[52px] px-6 py-3.5 text-center focus-visible:outline-2 focus-visible:outline-sage-500 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-warm-sm hover:shadow-warm active:scale-[0.98]";
+    "inline-flex items-center justify-center font-bold transition-all duration-200 rounded-full min-h-[52px] px-6 py-3.5 text-center focus-visible:outline-3 focus-visible:outline-[#4A6338] focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-warm-sm hover:shadow-warm active:scale-[0.98]";
 
   const variantClasses = {
     primary:
@@ -28,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
     secondary:
       "bg-transparent text-[#7D2352] border-2 border-[#7D2352] hover:bg-[#FBE7EC]",
     whatsapp:
-      "bg-[#4CA771] text-white hover:bg-[#3D8B5D] border-2 border-[#4CA771]",
+      "bg-[#2E7D47] text-white hover:bg-[#236337] border-2 border-[#2E7D47]",
   };
 
   const sizeClasses = {

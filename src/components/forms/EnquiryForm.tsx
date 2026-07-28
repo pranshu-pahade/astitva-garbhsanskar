@@ -84,16 +84,16 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
   if (isSuccess) {
     return (
       <div className={`rounded-[16px] bg-[#FBE7EC] p-8 text-center border-2 border-[#F2C0CD] shadow-warm ${className}`}>
-        <div className="w-16 h-16 rounded-full bg-[#4CA771] text-white flex items-center justify-center mx-auto mb-4 text-3xl">
+        <div className="w-16 h-16 rounded-full bg-[#2E7D47] text-white flex items-center justify-center mx-auto mb-4 text-3xl">
           ✓
         </div>
         <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-2">
           Thank you, {formData.name}!
         </h3>
-        <p className="text-base text-[#4A3B42] leading-relaxed mb-4">
+        <p className="text-base text-[#36292E] leading-relaxed mb-4">
           We have received your details. Opening WhatsApp now to connect you directly with Prajakta & Minal...
         </p>
-        <p className="text-xs text-[#9CAF88] font-semibold">
+        <p className="text-xs text-[#4A6338] font-bold">
           If WhatsApp didn't open automatically, tap the WhatsApp button below.
         </p>
       </div>
@@ -123,9 +123,9 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           placeholder="e.g. Radhika Sharma"
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] placeholder-[#9CAF88] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] placeholder-[#6B5B62] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base"
         />
-        {errors.name && <p className="text-xs font-semibold text-[#B5703A] mt-1">{errors.name}</p>}
+        {errors.name && <p className="text-xs font-semibold text-[#8C4E1D] mt-1">{errors.name}</p>}
       </div>
 
       {/* Phone / WhatsApp */}
@@ -139,9 +139,9 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           placeholder="e.g. 9094950304"
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] placeholder-[#9CAF88] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] placeholder-[#6B5B62] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base"
         />
-        {errors.phone && <p className="text-xs font-semibold text-[#B5703A] mt-1">{errors.phone}</p>}
+        {errors.phone && <p className="text-xs font-semibold text-[#8C4E1D] mt-1">{errors.phone}</p>}
       </div>
 
       {/* Month of Pregnancy */}
@@ -153,7 +153,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
           id="enquiry-month"
           value={formData.pregnancy_month}
           onChange={(e) => setFormData({ ...formData, pregnancy_month: e.target.value })}
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base cursor-pointer"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base cursor-pointer"
         >
           {Array.from({ length: 9 }).map((_, i) => (
             <option key={i + 1} value={i + 1}>
@@ -174,7 +174,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           placeholder="Tell us about your batch preference or health queries..."
-          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#4A3B42] placeholder-[#9CAF88] focus:border-[#9CAF88] focus:ring-1 focus:ring-[#9CAF88] outline-none text-base resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-[#FDF7F1] border border-[#F2C0CD] text-[#36292E] placeholder-[#6B5B62] focus:border-[#4A6338] focus:ring-1 focus:ring-[#4A6338] outline-none text-base resize-none"
         />
       </div>
 

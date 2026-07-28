@@ -19,8 +19,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   const alignClasses = align === "center" ? "text-center mx-auto" : "text-left";
   const titleColor = theme === "light" ? "text-[#FDF7F1]" : "text-[#5E1A3D]";
-  const eyebrowColor = theme === "light" ? "text-[#D5DEC6]" : "text-[#9CAF88]";
-  const subtitleColor = theme === "light" ? "text-[#F2C0CD]" : "text-[#4A3B42]";
+  const eyebrowColor = theme === "light" ? "text-[#D5DEC6]" : "text-[#4A6338]";
+  const subtitleColor = theme === "light" ? "text-[#F2C0CD]" : "text-[#36292E]";
 
   return (
     <div className={`max-w-3xl mb-12 sm:mb-16 ${alignClasses} ${className}`}>

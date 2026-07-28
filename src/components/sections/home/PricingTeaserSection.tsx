@@ -18,7 +18,7 @@ export const PricingTeaserSection: React.FC = () => {
         {/* Monthly Plan */}
         <Card bgColor="bg-[#FDF7F1]" className="flex flex-col justify-between p-8 border border-[#F2C0CD]">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#9CAF88] mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#4A6338] mb-2 block">
               MONTHLY SUBSCRIPTION
             </span>
             <h3 className="font-serif text-2xl font-bold text-[#5E1A3D] mb-4">
@@ -26,12 +26,12 @@ export const PricingTeaserSection: React.FC = () => {
             </h3>
             <div className="font-serif text-4xl sm:text-5xl font-bold text-[#7D2352] mb-4">
               {siteConfig.priceMonthly}
-              <span className="text-sm font-sans font-normal text-[#4A3B42]">
+              <span className="text-sm font-sans font-normal text-[#36292E]">
                 {" "}
                 / month
               </span>
             </div>
-            <p className="text-sm text-[#4A3B42] leading-relaxed mb-6">
+            <p className="text-sm text-[#36292E] leading-relaxed mb-6">
               Ideal if you wish to try the live sessions month-by-month. Join any time from your 3rd month onward.
             </p>
           </div>
@@ -54,12 +54,12 @@ export const PricingTeaserSection: React.FC = () => {
             </h3>
             <div className="font-serif text-4xl sm:text-5xl font-bold text-[#7D2352] mb-4">
               {siteConfig.pricePackage}
-              <span className="text-sm font-sans font-normal text-[#4A3B42]">
+              <span className="text-sm font-sans font-normal text-[#36292E]">
                 {" "}
                 (full package)
               </span>
             </div>
-            <p className="text-sm text-[#4A3B42] leading-relaxed mb-6">
+            <p className="text-sm text-[#36292E] leading-relaxed mb-6">
               Complete guidance for 6 full months of pregnancy + delivery + initial baby care. Save ₹3,100 compared to monthly!
             </p>
           </div>

@@ -20,7 +20,7 @@ export const HeroSection: React.FC = () => {
             A calm, connected pregnancy — and a deeper bond with your baby.
           </h1>
 
-          <p className="text-lg sm:text-xl text-[#4A3B42] leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg sm:text-xl text-[#36292E] leading-relaxed mb-8 max-w-xl">
             Live daily Zoom sessions with Prajakta & Minal. Yoga, pranayam, mantra, and Vaidik sanskars, guided personally — from your 3rd month through delivery and beyond.
           </p>
 
@@ -49,7 +49,7 @@ export const HeroSection: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1 text-[#B5703A]">
+              <div className="flex items-center gap-1 text-[#8C4E1D]">
                 {"★".repeat(5)}
               </div>
               <span className="text-xs sm:text-sm font-bold text-[#5E1A3D]">
@@ -79,7 +79,7 @@ export const HeroSection: React.FC = () => {
               <p className="font-serif text-xl font-bold text-[#5E1A3D] mb-1">
                 "{siteConfig.tagline}"
               </p>
-              <p className="text-xs text-[#9CAF88] font-bold tracking-widest uppercase">
+              <p className="text-xs text-[#4A6338] font-bold tracking-widest uppercase">
                 {siteConfig.taglineEn}
               </p>
             </div>

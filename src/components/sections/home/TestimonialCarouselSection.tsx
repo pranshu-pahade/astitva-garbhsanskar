@@ -99,7 +99,7 @@ export const TestimonialCarouselSection: React.FC<TestimonialCarouselSectionProp
       >
         <Card bgColor="bg-[#FDF7F1]" className="p-8 sm:p-12 text-center shadow-warm-lg relative border border-[#F2C0CD]">
           {/* Star Rating */}
-          <div className="flex justify-center gap-1.5 text-[#B5703A] text-2xl mb-6">
+          <div className="flex justify-center gap-1.5 text-[#8C4E1D] text-2xl mb-6">
             {Array.from({ length: currentItem.rating || 5 }).map((_, i) => (
               <span key={i}>★</span>
             ))}
@@ -116,7 +116,7 @@ export const TestimonialCarouselSection: React.FC<TestimonialCarouselSectionProp
               {currentItem.name}
             </span>
             {currentItem.pregnancy_month && (
-              <span className="text-sm font-semibold text-[#9CAF88]">
+              <span className="text-sm font-bold text-[#4A6338]">
                 Month {currentItem.pregnancy_month} of pregnancy
               </span>
             )}
@@ -132,7 +132,7 @@ export const TestimonialCarouselSection: React.FC<TestimonialCarouselSectionProp
               className={`h-3 rounded-full transition-all duration-300 ${
                 idx === currentIndex
                   ? "w-8 bg-[#7D2352]"
-                  : "w-3 bg-[#F2C0CD] hover:bg-[#9CAF88]"
+                  : "w-3 bg-[#F2C0CD] hover:bg-[#4A6338]"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

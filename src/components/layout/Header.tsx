@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
             <span className="font-serif font-bold text-xl sm:text-2xl text-[#5E1A3D] leading-tight tracking-tight">
               ASTITVA
             </span>
-            <span className="text-[10px] sm:text-xs font-bold tracking-widest text-[#9CAF88] uppercase leading-none">
+            <span className="text-[10px] sm:text-xs font-bold tracking-widest text-[#4A6338] uppercase leading-none">
               GARBHSANSKAR
             </span>
           </div>
@@ -77,12 +77,12 @@ export const Header: React.FC = () => {
                 className={`font-semibold text-base transition-colors relative py-1 ${
                   isActive
                     ? "text-[#7D2352] font-bold"
-                    : "text-[#4A3B42] hover:text-[#7D2352]"
+                    : "text-[#36292E] hover:text-[#7D2352]"
                 }`}
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#9CAF88] rounded-full" />
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4A6338] rounded-full" />
                 )}
               </Link>
             );
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-xl text-[#5E1A3D] hover:bg-[#FBE7EC] focus-visible:outline-2 focus-visible:outline-[#9CAF88]"
+          className="md:hidden p-2 rounded-xl text-[#5E1A3D] hover:bg-[#FBE7EC] focus-visible:outline-3 focus-visible:outline-[#4A6338]"
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
         >
