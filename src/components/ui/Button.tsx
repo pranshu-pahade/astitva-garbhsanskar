@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "whatsapp";
+  variant?: "primary" | "secondary" | "whatsapp" | "light";
   size?: "md" | "lg";
   href?: string;
   external?: boolean;
@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-semibold transition-all duration-200 rounded-full min-h-[50px] px-7 py-3 text-center focus-visible:outline-3 focus-visible:outline-[#8E2B5C] focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5 active:scale-[0.98]";
+    "inline-flex items-center justify-center font-bold transition-all duration-200 rounded-full min-h-[50px] px-7 py-3 text-center focus-visible:outline-3 focus-visible:outline-[#8E2B5C] focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5 active:scale-[0.98]";
 
   const variantClasses = {
     primary:
@@ -28,7 +28,9 @@ export const Button: React.FC<ButtonProps> = ({
     secondary:
       "bg-[#FFF6EE] text-[#8E2B5C] border-2 border-[#8E2B5C] hover:bg-[#FCECE9]",
     whatsapp:
-      "bg-[#FFF6EE] text-[#8E2B5C] border-2 border-[#D4A373] hover:bg-[#FCECE9]",
+      "bg-[#2E7D47] text-white hover:bg-[#246338] border-2 border-[#2E7D47]",
+    light:
+      "bg-[#FFF6EE] text-[#8E2B5C] hover:bg-[#FCECE9] border-2 border-[#FFF6EE]",
   };
 
   const sizeClasses = {

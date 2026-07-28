@@ -1,10 +1,17 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export const MeetFoundersSection: React.FC = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   const credentials = [
     "M.A. Yogashastra",
     "MSc Qualified",
@@ -15,12 +22,11 @@ export const MeetFoundersSection: React.FC = () => {
   return (
     <Section bgColor="cream-50" id="founders">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-        {/* Left Column: Founders Portrait with Blush Blob */}
+        {/* Left Column: Founders Portrait */}
         <div className="lg:col-span-5 flex justify-center relative">
-          {/* Blush-300 background blob */}
-          <div className="absolute inset-0 bg-[#F2C0CD] rounded-[32px] transform -rotate-3 scale-95 opacity-80 blur-xs" />
+          <div className="absolute inset-0 bg-[#F3B6B2] rounded-[32px] transform -rotate-3 scale-95 opacity-80 blur-xs" />
           
-          <div className="relative max-w-[400px] w-full aspect-[679/906] rounded-[24px] overflow-hidden shadow-warm-lg border-4 border-[#FDF7F1]">
+          <div className="relative max-w-[400px] w-full aspect-[679/906] rounded-[24px] overflow-hidden shadow-warm-lg border-4 border-[#FFF6EE]">
             <Image
               src="/images/founders.webp"
               alt="Founders Prajakta Dhamane and Minal Purkar in sarees"
@@ -34,14 +40,14 @@ export const MeetFoundersSection: React.FC = () => {
         {/* Right Column: Narrative & Credentials */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           <SectionHeading
-            eyebrow="YOUR GUIDES & FOUNDERS"
-            title="Meet Prajakta & Minal"
+            eyebrow={t.founders.eyebrow}
+            title={t.founders.title}
             align="left"
             className="mb-6"
           />
 
           <p className="text-base sm:text-lg text-[#36292E] leading-relaxed mb-6">
-            Astitva Garbhsanskar was born out of our own family's pregnancy journey in Pune, where we saw firsthand how traditional wisdom transforms a mother's calm and a newborn's health. We combine authentic Vaidik sanskars with scientific medical yoga therapy so every mother feels supported, understood, and deeply connected to her baby. As two women founders, we personally lead every single session and hold your hand through every month of pregnancy and baby care.
+            {t.founders.narrative}
           </p>
 
           {/* Credentials Pills */}
@@ -49,7 +55,7 @@ export const MeetFoundersSection: React.FC = () => {
             {credentials.map((pill, idx) => (
               <span
                 key={idx}
-                className="px-3.5 py-1.5 rounded-full bg-[#D5DEC6] text-[#4A1230] text-xs sm:text-sm font-bold shadow-warm-sm"
+                className="px-3.5 py-1.5 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs sm:text-sm font-bold shadow-warm-sm"
               >
                 {pill}
               </span>
@@ -57,7 +63,7 @@ export const MeetFoundersSection: React.FC = () => {
           </div>
 
           <Button href="/about" variant="secondary" size="md">
-            Read Our Story
+            {t.founders.readStory}
           </Button>
         </div>
       </div>

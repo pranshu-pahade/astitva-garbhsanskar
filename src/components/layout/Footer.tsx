@@ -1,20 +1,27 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { LeafDivider } from "@/components/ui/LeafDivider";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export const Footer: React.FC = () => {
-  return (
-    <footer className="w-full bg-[#4A1230] text-[#FDF7F1] pt-12 pb-8 px-5 sm:px-8 mt-auto">
-      <div className="max-w-[1120px] mx-auto">
-        <LeafDivider color="#D5DEC6" className="mb-12 opacity-80" />
+  const { lang } = useLanguage();
+  const t = translations[lang];
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 pb-12 border-b border-[#7D2352]">
+  return (
+    <footer className="w-full bg-[#4A1230] text-[#FFF6EE] pt-12 pb-8 px-5 sm:px-8 mt-auto">
+      <div className="max-w-[1120px] mx-auto">
+        <LeafDivider color="#E2EAD8" className="mb-12 opacity-80" />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 pb-12 border-b border-[#8E2B5C]">
           {/* Column 1: Logo & Taglines */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 flex-shrink-0 bg-[#FDF7F1] rounded-full p-1">
+              <div className="relative w-12 h-12 flex-shrink-0 bg-[#FFF6EE] rounded-full p-1">
                 <Image
                   src="/images/logo.webp"
                   alt="Astitva Garbhsanskar Logo"
@@ -23,70 +30,55 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif font-bold text-2xl text-[#FDF7F1] tracking-tight">
+                <span className="font-serif font-bold text-2xl text-[#FFF6EE] tracking-tight">
                   ASTITVA
                 </span>
-                <span className="text-[10px] font-bold tracking-widest text-[#FDF7F1] uppercase">
+                <span className="text-[10px] font-bold tracking-widest text-[#FFF6EE] uppercase">
                   GARBHSANSKAR
                 </span>
               </div>
             </div>
 
-            <p className="font-serif text-xl text-[#FDF7F1] font-medium leading-snug mt-1">
-              "{siteConfig.tagline}"
+            <p className="font-serif text-xl text-[#FFF6EE] font-medium leading-snug mt-1">
+              "{t.hero.tagline}"
             </p>
-            <p className="text-sm text-[#FBE7EC] italic">
-              {siteConfig.taglineEn}
+            <p className="text-sm text-[#FCECE9] italic">
+              {t.hero.taglineEn}
             </p>
-            <p className="text-xs text-[#FBE7EC] mt-2">
-              Guided personally by Prajakta Dhamane & Minal Purkar in Pune, India.
+            <p className="text-xs text-[#FCECE9] mt-2">
+              {t.footer.guided}
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="flex flex-col gap-3">
-            <h3 className="font-serif text-lg font-bold text-[#FDF7F1] mb-2">
-              Explore Astitva
+            <h3 className="font-serif text-lg font-bold text-[#FFF6EE] mb-2">
+              {t.footer.explore}
             </h3>
             <ul className="space-y-2.5 text-base">
               <li>
-                <Link
-                  href="/"
-                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
-                >
-                  Home
+                <Link href="/" className="text-[#FCECE9] hover:text-[#FFF6EE] transition-colors">
+                  {t.nav.home}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/about"
-                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
-                >
-                  About Us & Founders
+                <Link href="/about" className="text-[#FCECE9] hover:text-[#FFF6EE] transition-colors">
+                  {t.nav.about}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/program"
-                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
-                >
-                  Our Program & Batches
+                <Link href="/program" className="text-[#FCECE9] hover:text-[#FFF6EE] transition-colors">
+                  {t.nav.program}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/reviews"
-                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
-                >
-                  Mother Reviews & Screenshots
+                <Link href="/reviews" className="text-[#FCECE9] hover:text-[#FFF6EE] transition-colors">
+                  {t.nav.reviews}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
-                >
-                  Contact & Book Demo
+                <Link href="/contact" className="text-[#FCECE9] hover:text-[#FFF6EE] transition-colors">
+                  {t.nav.contact}
                 </Link>
               </li>
             </ul>
@@ -94,16 +86,16 @@ export const Footer: React.FC = () => {
 
           {/* Column 3: Contact & Social */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-lg font-bold text-[#FDF7F1] mb-2">
-              Connect With Us
+            <h3 className="font-serif text-lg font-bold text-[#FFF6EE] mb-2">
+              {t.footer.connect}
             </h3>
             <div className="flex flex-col gap-3 text-base">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-3 text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
+                className="flex items-center gap-3 text-[#FCECE9] hover:text-[#FFF6EE] transition-colors"
               >
                 <svg
-                  className="w-5 h-5 text-[#FBE7EC] flex-shrink-0"
+                  className="w-5 h-5 text-[#FCECE9] flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -121,10 +113,10 @@ export const Footer: React.FC = () => {
               {siteConfig.email && (
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-3 text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
+                  className="flex items-center gap-3 text-[#FCECE9] hover:text-[#FFF6EE] transition-colors"
                 >
                   <svg
-                    className="w-5 h-5 text-[#FBE7EC] flex-shrink-0"
+                    className="w-5 h-5 text-[#FCECE9] flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -145,10 +137,10 @@ export const Footer: React.FC = () => {
                   href={siteConfig.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
+                  className="flex items-center gap-3 text-[#FCECE9] hover:text-[#FFF6EE] transition-colors"
                 >
                   <svg
-                    className="w-5 h-5 text-[#FBE7EC] flex-shrink-0"
+                    className="w-5 h-5 text-[#FCECE9] flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -162,10 +154,10 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#FBE7EC]">
-          <span>© 2026 Astitva Garbhsanskar. All rights reserved.</span>
+        <div className="pt-8 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#FCECE9]">
+          <span>{t.footer.rights}</span>
           <span className="opacity-90">
-            Pune, Maharashtra, India · Founded July 2025
+            {t.footer.location}
           </span>
         </div>
       </div>
