@@ -26,33 +26,33 @@ export const Footer: React.FC = () => {
                 <span className="font-serif font-bold text-2xl text-[#FDF7F1] tracking-tight">
                   ASTITVA
                 </span>
-                <span className="text-[10px] font-bold tracking-widest text-[#D5DEC6] uppercase">
+                <span className="text-[10px] font-bold tracking-widest text-[#FDF7F1] uppercase">
                   GARBHSANSKAR
                 </span>
               </div>
             </div>
 
-            <p className="font-serif text-xl text-[#F2C0CD] font-medium leading-snug mt-1">
+            <p className="font-serif text-xl text-[#FDF7F1] font-medium leading-snug mt-1">
               "{siteConfig.tagline}"
             </p>
-            <p className="text-sm text-[#D5DEC6] italic">
+            <p className="text-sm text-[#FBE7EC] italic">
               {siteConfig.taglineEn}
             </p>
-            <p className="text-xs text-[#F2C0CD] opacity-80 mt-2">
+            <p className="text-xs text-[#FBE7EC] mt-2">
               Guided personally by Prajakta Dhamane & Minal Purkar in Pune, India.
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="flex flex-col gap-3">
-            <h3 className="font-serif text-lg font-bold text-[#F2C0CD] mb-2">
+            <h3 className="font-serif text-lg font-bold text-[#FDF7F1] mb-2">
               Explore Astitva
             </h3>
             <ul className="space-y-2.5 text-base">
               <li>
                 <Link
                   href="/"
-                  className="text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   Home
                 </Link>
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/about"
-                  className="text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   About Us & Founders
                 </Link>
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/program"
-                  className="text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   Our Program & Batches
                 </Link>
@@ -76,7 +76,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/reviews"
-                  className="text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   Mother Reviews & Screenshots
                 </Link>
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   Contact & Book Demo
                 </Link>
@@ -94,16 +94,16 @@ export const Footer: React.FC = () => {
 
           {/* Column 3: Contact & Social */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-lg font-bold text-[#F2C0CD] mb-2">
+            <h3 className="font-serif text-lg font-bold text-[#FDF7F1] mb-2">
               Connect With Us
             </h3>
             <div className="flex flex-col gap-3 text-base">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-3 text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                className="flex items-center gap-3 text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
               >
                 <svg
-                  className="w-5 h-5 text-[#D5DEC6] flex-shrink-0"
+                  className="w-5 h-5 text-[#FBE7EC] flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -121,10 +121,10 @@ export const Footer: React.FC = () => {
               {siteConfig.email && (
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-3 text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="flex items-center gap-3 text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   <svg
-                    className="w-5 h-5 text-[#D5DEC6] flex-shrink-0"
+                    className="w-5 h-5 text-[#FBE7EC] flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -145,10 +145,10 @@ export const Footer: React.FC = () => {
                   href={siteConfig.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#FDF7F1] hover:text-[#D5DEC6] transition-colors"
+                  className="flex items-center gap-3 text-[#FBE7EC] hover:text-[#FDF7F1] transition-colors"
                 >
                   <svg
-                    className="w-5 h-5 text-[#D5DEC6] flex-shrink-0"
+                    className="w-5 h-5 text-[#FBE7EC] flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -162,9 +162,9 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F2C0CD]">
+        <div className="pt-8 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#FBE7EC]">
           <span>© 2026 Astitva Garbhsanskar. All rights reserved.</span>
-          <span className="opacity-75">
+          <span className="opacity-90">
             Pune, Maharashtra, India · Founded July 2025
           </span>
         </div>
