@@ -1,13 +1,20 @@
+"use client";
+
 import React from "react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export const AstitvaDifferenceSection: React.FC = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   const differences = [
     {
-      title: "Live, not just recorded",
-      subtitle: "Real-time sessions on Zoom. Answers in the moment, not a video library.",
+      title: t.difference.d1Title,
+      subtitle: t.difference.d1Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -18,8 +25,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: "Personal 1-to-1 attention",
-      subtitle: "You talk directly with the founders. Every mother is known by name.",
+      title: t.difference.d2Title,
+      subtitle: t.difference.d2Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -30,8 +37,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: "Expert-led & qualified",
-      subtitle: "M.A. Yogashastra, MSc, medical yoga therapist, certified Garbhsanskar.",
+      title: t.difference.d3Title,
+      subtitle: t.difference.d3Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -42,8 +49,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: "The full journey",
-      subtitle: "Pregnancy, delivery, and mother & baby care up to ~2 years.",
+      title: t.difference.d4Title,
+      subtitle: t.difference.d4Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -58,15 +65,15 @@ export const AstitvaDifferenceSection: React.FC = () => {
   return (
     <Section bgColor="cream-50" id="difference">
       <SectionHeading
-        eyebrow="WHY MOTHERS TRUST US"
-        title="The Astitva Difference"
-        subtitle="We aren't a high-volume app or recorded course. We are two founder-teachers guiding you personally every morning and evening."
+        eyebrow={t.difference.eyebrow}
+        title={t.difference.title}
+        subtitle={t.difference.subtitle}
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {differences.map((item, index) => (
           <Card key={index} bgColor="bg-[#F7EDE3]" className="flex items-start gap-5 p-6 sm:p-8">
-            <div className="w-12 h-12 rounded-2xl bg-[#FBE7EC] flex items-center justify-center text-[#B5703A] flex-shrink-0 shadow-warm-sm border border-[#F2C0CD]">
+            <div className="w-12 h-12 rounded-2xl bg-[#FBE7EC] flex items-center justify-center text-[#8C4E1D] flex-shrink-0 shadow-warm-sm border border-[#F2C0CD]">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {item.icon}
               </svg>
@@ -75,7 +82,7 @@ export const AstitvaDifferenceSection: React.FC = () => {
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#5E1A3D] mb-2 leading-snug">
                 {item.title}
               </h3>
-              <p className="text-base text-[#4A3B42] leading-relaxed">
+              <p className="text-base text-[#36292E] leading-relaxed">
                 {item.subtitle}
               </p>
             </div>

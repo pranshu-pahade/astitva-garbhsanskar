@@ -1,9 +1,16 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site-config";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export const HeroSection: React.FC = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <section className="relative w-full bg-[#FDF7F1] py-12 sm:py-20 md:py-24 px-5 sm:px-8 overflow-hidden">
       {/* Soft blush-100 radial background glow */}
@@ -13,20 +20,20 @@ export const HeroSection: React.FC = () => {
         {/* Left Column: Content */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#FBE7EC] text-[#7D2352] text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 border border-[#F2C0CD]">
-            LIVE ONLINE GARBHSANSKAR
+            {t.hero.eyebrow}
           </span>
 
           <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#5E1A3D] leading-[1.15] mb-6">
-            A calm, connected pregnancy — and a deeper bond with your baby.
+            {t.hero.title}
           </h1>
 
           <p className="text-lg sm:text-xl text-[#36292E] leading-relaxed mb-8 max-w-xl">
-            Live daily Zoom sessions with Prajakta & Minal. Yoga, pranayam, mantra, and Vaidik sanskars, guided personally — from your 3rd month through delivery and beyond.
+            {t.hero.subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
             <Button href="/contact" variant="primary" size="lg">
-              Book a Free Demo
+              {t.nav.bookDemo}
             </Button>
             <Button
               href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi,%20I'd%20like%20to%20know%20more%20about%20Astitva%20Garbhsanskar.`}
@@ -34,7 +41,7 @@ export const HeroSection: React.FC = () => {
               size="lg"
               external
             >
-              Chat on WhatsApp
+              {t.nav.chatWhatsapp}
             </Button>
           </div>
 
@@ -53,7 +60,7 @@ export const HeroSection: React.FC = () => {
                 {"★".repeat(5)}
               </div>
               <span className="text-xs sm:text-sm font-bold text-[#5E1A3D]">
-                150+ mothers guided · 32 currently with us
+                {t.hero.trust}
               </span>
             </div>
           </div>
@@ -77,10 +84,10 @@ export const HeroSection: React.FC = () => {
                 />
               </div>
               <p className="font-serif text-xl font-bold text-[#5E1A3D] mb-1">
-                "{siteConfig.tagline}"
+                "{t.hero.tagline}"
               </p>
               <p className="text-xs text-[#4A6338] font-bold tracking-widest uppercase">
-                {siteConfig.taglineEn}
+                {t.hero.taglineEn}
               </p>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { siteConfig } from "@/lib/site-config";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -101,10 +102,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-[#FDF7F1] text-[#36292E] selection:bg-[#5E1A3D] selection:text-[#FDF7F1]">
-        <Header />
-        <main className="flex-1 pb-16 sm:pb-0">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+        <LanguageProvider>
+          <Header />
+          <main className="flex-1 pb-16 sm:pb-0">{children}</main>
+          <Footer />
+          <FloatingWhatsApp />
+        </LanguageProvider>
 
         {/* GA4 Script */}
         {gaId && (
