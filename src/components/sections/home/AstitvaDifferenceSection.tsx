@@ -13,8 +13,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
 
   const differences = [
     {
-      title: t.difference.d1Title,
-      subtitle: t.difference.d1Desc,
+      title: "Live, Not Recorded",
+      subtitle: "Real-time sessions with immediate answers",
       icon: (
         <path
           strokeLinecap="round"
@@ -25,8 +25,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: t.difference.d2Title,
-      subtitle: t.difference.d2Desc,
+      title: "1-to-1 Attention",
+      subtitle: "Direct guidance from the founders",
       icon: (
         <path
           strokeLinecap="round"
@@ -37,20 +37,20 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: t.difference.d3Title,
-      subtitle: t.difference.d3Desc,
+      title: "Expert-Led & Qualified",
+      subtitle: "M.A. Yogashastra, MSc, Medical Yoga Therapist",
       icon: (
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.8"
-          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+          d="M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
         />
       ),
     },
     {
-      title: t.difference.d4Title,
-      subtitle: t.difference.d4Desc,
+      title: "The Full Journey",
+      subtitle: "Pregnancy to 2 years of baby care with Vaidik Sanskars",
       icon: (
         <path
           strokeLinecap="round"
@@ -65,27 +65,25 @@ export const AstitvaDifferenceSection: React.FC = () => {
   return (
     <Section bgColor="cream-50" id="difference">
       <SectionHeading
-        eyebrow={t.difference.eyebrow}
-        title={t.difference.title}
-        subtitle={t.difference.subtitle}
+        eyebrow="WHY MOTHERS TRUST US"
+        title="Why Choose Astitva?"
+        subtitle="We aren't a high-volume app or recorded course. We are two founder-teachers guiding you personally every morning and evening."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {differences.map((item, index) => (
-          <Card key={index} bgColor="bg-[#F7EDE3]" className="flex items-start gap-5 p-6 sm:p-8">
-            <div className="w-12 h-12 rounded-2xl bg-[#FBE7EC] flex items-center justify-center text-[#8C4E1D] flex-shrink-0 shadow-warm-sm border border-[#F2C0CD]">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <Card key={index} bgColor="bg-[#FFF6EE]" className="flex flex-col items-center text-center p-6 border border-[#F3B6B2]">
+            <div className="w-14 h-14 rounded-full bg-[#FCECE9] flex items-center justify-center text-[#8E2B5C] mb-4 shadow-warm-sm border border-[#F3B6B2]">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {item.icon}
               </svg>
             </div>
-            <div>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#5E1A3D] mb-2 leading-snug">
-                {item.title}
-              </h3>
-              <p className="text-base text-[#36292E] leading-relaxed">
-                {item.subtitle}
-              </p>
-            </div>
+            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#8E2B5C] mb-2 leading-snug">
+              {item.title}
+            </h3>
+            <p className="text-sm text-[#36292E] opacity-90 leading-relaxed">
+              {item.subtitle}
+            </p>
           </Card>
         ))}
       </div>

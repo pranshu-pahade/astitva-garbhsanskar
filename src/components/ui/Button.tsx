@@ -20,20 +20,20 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-bold transition-all duration-200 rounded-full min-h-[52px] px-6 py-3.5 text-center focus-visible:outline-3 focus-visible:outline-[#4A6338] focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-warm-sm hover:shadow-warm active:scale-[0.98]";
+    "inline-flex items-center justify-center font-semibold transition-all duration-200 rounded-full min-h-[50px] px-7 py-3 text-center focus-visible:outline-3 focus-visible:outline-[#8E2B5C] focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5 active:scale-[0.98]";
 
   const variantClasses = {
     primary:
-      "bg-[#7D2352] text-[#FDF7F1] hover:bg-[#5E1A3D] border-2 border-[#7D2352] hover:border-[#5E1A3D]",
+      "bg-[#8E2B5C] text-[#FFF6EE] hover:bg-[#722049] border-2 border-[#8E2B5C]",
     secondary:
-      "bg-transparent text-[#7D2352] border-2 border-[#7D2352] hover:bg-[#FBE7EC]",
+      "bg-[#FFF6EE] text-[#8E2B5C] border-2 border-[#8E2B5C] hover:bg-[#FCECE9]",
     whatsapp:
-      "bg-[#2E7D47] text-white hover:bg-[#236337] border-2 border-[#2E7D47]",
+      "bg-[#FFF6EE] text-[#8E2B5C] border-2 border-[#D4A373] hover:bg-[#FCECE9]",
   };
 
   const sizeClasses = {
     md: "text-base sm:text-lg",
-    lg: "text-lg sm:text-xl px-8 py-4",
+    lg: "text-lg sm:text-xl px-8 py-3.5",
   };
 
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;

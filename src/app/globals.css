@@ -2,55 +2,58 @@
 
 @theme {
   --color-plum-900: #4A1230;
-  --color-plum-800: #5E1A3D;
-  --color-plum-600: #7D2352;
-  --color-berry-500: #9B2C6F;
-  --color-blush-300: #F2C0CD;
-  --color-blush-100: #FBE7EC;
-  --color-sage-700: #4A6338;
-  --color-sage-500: #9CAF88;
-  --color-sage-200: #D5DEC6;
-  --color-tan-600: #8C4E1D;
-  --color-tan-400: #DDB380;
-  --color-peach-200: #F7C9AC;
-  --color-cream-50: #FDF7F1;
-  --color-cream-100: #F7EDE3;
+  --color-plum-800: #8E2B5C;
+  --color-plum-600: #A0336B;
+  --color-berry-500: #8E2B5C;
+  --color-blush-300: #F3B6B2;
+  --color-blush-100: #FCECE9;
+  --color-sage-700: #3A5E2E;
+  --color-sage-500: #9CAF8A;
+  --color-sage-200: #E2EAD8;
+  --color-tan-600: #D4A373;
+  --color-tan-400: #E5C3A1;
+  --color-peach-200: #F7D6C4;
+  --color-cream-50: #FFF6EE;
+  --color-cream-100: #F7EADF;
   --color-ink-700: #36292E;
   --color-whatsapp: #2E7D47;
+
+  --font-playfair: var(--font-playfair), serif;
+  --font-poppins: var(--font-poppins), sans-serif;
 }
 
 :root {
-  --font-heading: var(--font-fraunces), serif;
-  --font-body: var(--font-nunito-sans), sans-serif;
+  --font-heading: var(--font-playfair), serif;
+  --font-body: var(--font-poppins), sans-serif;
   --color-plum-900: #4A1230;
-  --color-plum-800: #5E1A3D;
-  --color-plum-600: #7D2352;
-  --color-berry-500: #9B2C6F;
-  --color-blush-300: #F2C0CD;
-  --color-blush-100: #FBE7EC;
-  --color-sage-700: #4A6338;
-  --color-sage-500: #9CAF88;
-  --color-sage-200: #D5DEC6;
-  --color-tan-600: #8C4E1D;
-  --color-tan-400: #DDB380;
-  --color-peach-200: #F7C9AC;
-  --color-cream-50: #FDF7F1;
-  --color-cream-100: #F7EDE3;
+  --color-plum-800: #8E2B5C;
+  --color-plum-600: #A0336B;
+  --color-berry-500: #8E2B5C;
+  --color-blush-300: #F3B6B2;
+  --color-blush-100: #FCECE9;
+  --color-sage-700: #3A5E2E;
+  --color-sage-500: #9CAF8A;
+  --color-sage-200: #E2EAD8;
+  --color-tan-600: #D4A373;
+  --color-tan-400: #E5C3A1;
+  --color-peach-200: #F7D6C4;
+  --color-cream-50: #FFF6EE;
+  --color-cream-100: #F7EADF;
   --color-ink-700: #36292E;
   --color-whatsapp: #2E7D47;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #FDF7F1;
+  background-color: #FFF6EE;
 }
 
 body {
-  background-color: #FDF7F1;
+  background-color: #FFF6EE;
   color: #36292E;
   font-family: var(--font-body);
   line-height: 1.7;
-  font-size: clamp(17px, 1.1vw + 14px, 20px);
+  font-size: clamp(16px, 1vw + 14px, 19px);
   overflow-x: hidden;
 }
 
@@ -58,22 +61,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
-/* Warm tinted shadows */
+/* Warm moodboard tinted shadows */
 .shadow-warm {
-  box-shadow: 0 8px 30px rgba(94, 26, 61, 0.08);
+  box-shadow: 0 8px 30px rgba(142, 43, 92, 0.07);
 }
 
 .shadow-warm-lg {
-  box-shadow: 0 16px 40px rgba(94, 26, 61, 0.12);
+  box-shadow: 0 16px 40px rgba(142, 43, 92, 0.12);
 }
 
 .shadow-warm-sm {
-  box-shadow: 0 4px 14px rgba(94, 26, 61, 0.06);
+  box-shadow: 0 4px 14px rgba(142, 43, 92, 0.05);
 }
 
 /* High contrast focus ring for accessibility */
 *:focus-visible {
-  outline: 3px solid #4A6338;
+  outline: 3px solid #8E2B5C;
   outline-offset: 3px;
 }
 
@@ -121,12 +124,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FDF7F1;
+  background: #FFF6EE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #F2C0CD;
+  background: #F3B6B2;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4A6338;
+  background: #8E2B5C;
 }
