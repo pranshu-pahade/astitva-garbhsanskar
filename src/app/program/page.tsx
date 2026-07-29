@@ -262,65 +262,123 @@ export default function ProgramPage() {
         </p>
       </Section>
 
-      {/* 6. Pricing Details */}
+      {/* 6. Fee Structure & Pricing Details */}
       <Section bgColor="cream-50" id="pricing">
         <SectionHeading
           eyebrow="TRANSPARENT FEES"
-          title="Simple, Low-Pressure Pricing"
-          subtitle="Choose the option that feels most comfortable for your family."
+          title="Simple & Flexible Fee Structure"
+          subtitle="या काळात आईने आनंदी, निरोगी आणि Active राहाणे गरजेचे आहे. Choose the plan that fits your stage of pregnancy."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-6">
-          {/* Monthly */}
-          <Card bgColor="bg-[#FFF6EE]" className="p-8 border border-[#F3B6B2] flex flex-col justify-between">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#3A5E2E] mb-2 block">
-                MONTHLY PLAN
-              </span>
-              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
-                Monthly Subscription
-              </h3>
-              <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
-                {siteConfig.priceMonthly} <span className="text-sm font-sans text-[#36292E] font-normal">/ month</span>
+        {/* Standard Plans */}
+        <div className="max-w-5xl mx-auto mb-10">
+          <h3 className="font-serif text-xl font-bold text-[#8E2B5C] mb-4 text-center">
+            🌸 General Plans (Joining in 1st or 2nd Trimester)
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Monthly */}
+            <Card bgColor="bg-[#FFF6EE]" className="p-7 border border-[#F3B6B2] flex flex-col justify-between shadow-warm-sm">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#3A5E2E] mb-2 block">
+                  REGULAR MONTHLY PLAN
+                </span>
+                <h4 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-2">
+                  Monthly Subscription
+                </h4>
+                <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
+                  {siteConfig.priceMonthly} <span className="text-sm font-sans text-[#36292E] font-normal">/ month</span>
+                </div>
+                <ul className="space-y-2 text-sm text-[#36292E] mb-6">
+                  <li>✓ Access to all 3 daily Zoom batches (Morning, Afternoon, Evening)</li>
+                  <li>✓ Daily live yoga, pranayam & Geeta paath</li>
+                  <li>✓ Pay month-by-month as you progress</li>
+                </ul>
               </div>
-              <ul className="space-y-2.5 text-sm text-[#36292E] mb-6">
-                <li>✓ Access to all 3 daily Zoom batches</li>
-                <li>✓ Daily live yoga & pranayam</li>
-                <li>✓ Geeta & Ramraksha recitations</li>
-                <li>✓ Cancel or renew anytime</li>
-              </ul>
-            </div>
-            <Button href="#enquire" variant="secondary" size="md" className="w-full">
-              Join Monthly
-            </Button>
-          </Card>
+              <Button href="#enquire" variant="secondary" size="md" className="w-full">
+                Join Monthly ({siteConfig.priceMonthly})
+              </Button>
+            </Card>
 
-          {/* Full Package */}
-          <Card bgColor="bg-[#FFF6EE]" className="p-8 border-2 border-[#8E2B5C] relative shadow-warm-lg flex flex-col justify-between">
-            <div className="absolute -top-3.5 right-6 bg-[#F3B6B2] text-[#8E2B5C] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              Best Value
-            </div>
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#8E2B5C] mb-2 block">
-                FULL PREGNANCY PACKAGE
-              </span>
-              <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
-                Complete Pregnancy Journey
-              </h3>
-              <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
-                {siteConfig.pricePackage} <span className="text-sm font-sans text-[#36292E] font-normal">(one-time)</span>
+            {/* Full Package */}
+            <Card bgColor="bg-[#FFF6EE]" className="p-7 border-2 border-[#8E2B5C] relative shadow-warm flex flex-col justify-between">
+              <div className="absolute -top-3.5 right-6 bg-[#F3B6B2] text-[#8E2B5C] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                Most Popular
               </div>
-              <ul className="space-y-2.5 text-sm text-[#36292E] mb-6">
-                <li>✓ Full coverage from early pregnancy through delivery</li>
-                <li>✓ Save ₹3,100 compared to paying monthly</li>
-                <li>✓ Special festival, Purnima & Couple Workshops included</li>
-                <li>✓ Post-delivery baby care & lactation support</li>
-              </ul>
-            </div>
-            <Button href="#enquire" variant="primary" size="md" className="w-full">
-              Choose Full Package
-            </Button>
-          </Card>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#8E2B5C] mb-2 block">
+                  FULL PREGNANCY JOURNEY
+                </span>
+                <h4 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-2">
+                  Full Package
+                </h4>
+                <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
+                  {siteConfig.pricePackage} <span className="text-sm font-sans text-[#36292E] font-normal">(one-time)</span>
+                </div>
+                <ul className="space-y-2 text-sm text-[#36292E] mb-6">
+                  <li>✓ Complete coverage from positive test through delivery</li>
+                  <li>✓ Includes all special workshops, Purnima & Couple sessions</li>
+                  <li>✓ Best value for full pregnancy guidance</li>
+                </ul>
+              </div>
+              <Button href="#enquire" variant="primary" size="md" className="w-full">
+                Choose Full Package ({siteConfig.pricePackage})
+              </Button>
+            </Card>
+          </div>
+        </div>
+
+        {/* Third Trimester Plans */}
+        <div className="max-w-5xl mx-auto mb-6">
+          <h3 className="font-serif text-xl font-bold text-[#8E2B5C] mb-4 text-center">
+            🌿 Third Trimester Plans (Joining in 7th Month Onwards)
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* 3rd Trimester Monthly */}
+            <Card bgColor="bg-[#FFF6EE]" className="p-7 border border-[#F3B6B2] flex flex-col justify-between shadow-warm-sm">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#3A5E2E] mb-2 block">
+                  7TH, 8TH & 9TH MONTH
+                </span>
+                <h4 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-2">
+                  Third Trimester Monthly
+                </h4>
+                <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
+                  {siteConfig.priceThirdTrimesterMonthly} <span className="text-sm font-sans text-[#36292E] font-normal">/ month</span>
+                </div>
+                <ul className="space-y-2 text-sm text-[#36292E] mb-6">
+                  <li>✓ Tailored for late-stage pregnancy & labor prep</li>
+                  <li>✓ Focused pelvic opening & labor breathwork</li>
+                  <li>✓ Monthly billing for 3rd trimester</li>
+                </ul>
+              </div>
+              <Button href="#enquire" variant="secondary" size="md" className="w-full">
+                Join 3rd Trimester Monthly ({siteConfig.priceThirdTrimesterMonthly})
+              </Button>
+            </Card>
+
+            {/* 3rd Trimester Full Package */}
+            <Card bgColor="bg-[#FFF6EE]" className="p-7 border border-[#8E2B5C] flex flex-col justify-between shadow-warm-sm">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#8E2B5C] mb-2 block">
+                  COMPLETE 3RD TRIMESTER
+                </span>
+                <h4 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-2">
+                  Third Trimester Package
+                </h4>
+                <div className="font-serif text-4xl font-bold text-[#8E2B5C] mb-4">
+                  {siteConfig.priceThirdTrimesterPackage} <span className="text-sm font-sans text-[#36292E] font-normal">(one-time)</span>
+                </div>
+                <ul className="space-y-2 text-sm text-[#36292E] mb-6">
+                  <li>✓ Complete 7th, 8th & 9th month coverage through delivery</li>
+                  <li>✓ Includes Baby Care, Postpartum Care & Hospital Bag workshops</li>
+                  <li>✓ One-time discounted 3rd trimester rate</li>
+                </ul>
+              </div>
+              <Button href="#enquire" variant="primary" size="md" className="w-full">
+                Choose 3rd Trimester Package ({siteConfig.priceThirdTrimesterPackage})
+              </Button>
+            </Card>
+          </div>
         </div>
 
         <p className="text-center text-sm text-[#36292E] opacity-90 italic">
