@@ -1,5 +1,6 @@
+"use client";
+
 import React from "react";
-import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
@@ -7,14 +8,13 @@ import { Button } from "@/components/ui/Button";
 import { LeafDivider } from "@/components/ui/LeafDivider";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
 import { siteConfig } from "@/lib/site-config";
-
-export const metadata: Metadata = {
-  title: "Our Program & Daily Sessions — Live Garbhsanskar Zoom Classes",
-  description:
-    "Explore the 45-minute daily Zoom sessions by Astitva Garbhsanskar. Live yoga, Geeta & Ramraksha paath, music therapy, Vaidik sanskars, and batch timings.",
-};
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function ProgramPage() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   const programBlocks = [
     {
       title: "Live Daily Sessions",
@@ -49,11 +49,39 @@ export default function ProgramPage() {
     },
   ];
 
+  const specialWorkshops = [
+    {
+      title: t.specialSessions.s1Title,
+      desc: t.specialSessions.s1Desc,
+      tag: "Creative Therapy",
+    },
+    {
+      title: t.specialSessions.s2Title,
+      desc: t.specialSessions.s2Desc,
+      tag: "Newborn Care",
+    },
+    {
+      title: t.specialSessions.s3Title,
+      desc: t.specialSessions.s3Desc,
+      tag: "Postpartum Recovery",
+    },
+    {
+      title: t.specialSessions.s4Title,
+      desc: t.specialSessions.s4Desc,
+      tag: "Preparation & Reading",
+    },
+    {
+      title: t.specialSessions.s5Title,
+      desc: t.specialSessions.s5Desc,
+      tag: "Monthly Interactive",
+    },
+  ];
+
   const timelineStops = [
     {
-      stage: "3rd Month",
-      title: "You Join Us",
-      desc: "Welcome session, posture safety assessment, and initiating daily gentle habits.",
+      stage: "Positive Test",
+      title: "Join As Soon As You Know",
+      desc: "Welcome session, early pregnancy care, and initiating gentle daily habits right when you find out.",
     },
     {
       stage: "4th–6th Month",
@@ -122,12 +150,43 @@ export default function ProgramPage() {
         </div>
       </Section>
 
-      {/* 3. Month-by-Month Journey Timeline */}
-      <Section bgColor="cream-100" id="timeline">
+      {/* 3. Special Masterclasses & Workshops Section */}
+      <Section bgColor="cream-100" id="special-workshops">
+        <SectionHeading
+          eyebrow={t.specialSessions.eyebrow}
+          title={t.specialSessions.title}
+          subtitle={t.specialSessions.subtitle}
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {specialWorkshops.map((workshop, idx) => (
+            <Card
+              key={idx}
+              bgColor="bg-[#FFF6EE]"
+              className="p-6 sm:p-7 border border-[#F3B6B2] flex flex-col justify-between shadow-warm-sm hover:shadow-warm transition-shadow"
+            >
+              <div>
+                <span className="inline-block px-3 py-1 rounded-full bg-[#FCECE9] text-[#8E2B5C] text-xs font-bold uppercase tracking-wider mb-4 border border-[#F3B6B2]">
+                  {workshop.tag}
+                </span>
+                <h3 className="font-serif text-xl font-bold text-[#8E2B5C] mb-3 leading-snug">
+                  {workshop.title}
+                </h3>
+                <p className="text-sm text-[#36292E] opacity-90 leading-relaxed mb-4">
+                  {workshop.desc}
+                </p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* 4. Month-by-Month Journey Timeline */}
+      <Section bgColor="cream-50" id="timeline">
         <SectionHeading
           eyebrow="TRIMESTER TO NEWBORN"
           title="Your Month-by-Month Timeline"
-          subtitle="We walk beside you every single week until long after your baby arrives."
+          subtitle="You can join as soon as you know you are pregnant! We walk beside you every single week until long after your baby arrives."
         />
 
         <div className="relative max-w-5xl mx-auto py-4">
@@ -155,8 +214,8 @@ export default function ProgramPage() {
         </div>
       </Section>
 
-      {/* 4. Batch Timings */}
-      <Section bgColor="cream-50" id="batches">
+      {/* 5. Batch Timings */}
+      <Section bgColor="cream-100" id="batches">
         <SectionHeading
           eyebrow="CONVENIENT DAILY SLOTS"
           title="Daily Zoom Batch Timings"
@@ -203,8 +262,8 @@ export default function ProgramPage() {
         </p>
       </Section>
 
-      {/* 5. Pricing Details */}
-      <Section bgColor="cream-100" id="pricing">
+      {/* 6. Pricing Details */}
+      <Section bgColor="cream-50" id="pricing">
         <SectionHeading
           eyebrow="TRANSPARENT FEES"
           title="Simple, Low-Pressure Pricing"
@@ -243,7 +302,7 @@ export default function ProgramPage() {
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#8E2B5C] mb-2 block">
-                FULL 3RD–9TH MONTH PACKAGE
+                FULL PREGNANCY PACKAGE
               </span>
               <h3 className="font-serif text-2xl font-bold text-[#8E2B5C] mb-3">
                 Complete Pregnancy Journey
@@ -252,9 +311,9 @@ export default function ProgramPage() {
                 {siteConfig.pricePackage} <span className="text-sm font-sans text-[#36292E] font-normal">(one-time)</span>
               </div>
               <ul className="space-y-2.5 text-sm text-[#36292E] mb-6">
-                <li>✓ Full coverage from 3rd month through delivery</li>
+                <li>✓ Full coverage from early pregnancy through delivery</li>
                 <li>✓ Save ₹3,100 compared to paying monthly</li>
-                <li>✓ Special festival & Purnima workshops included</li>
+                <li>✓ Special festival, Purnima & Couple Workshops included</li>
                 <li>✓ Post-delivery baby care & lactation support</li>
               </ul>
             </div>
@@ -269,9 +328,9 @@ export default function ProgramPage() {
         </p>
       </Section>
 
-      {/* 6. See a Real Session */}
+      {/* 7. See a Real Session */}
       {siteConfig.feedbackVideoUrl && (
-        <Section bgColor="cream-50" id="video">
+        <Section bgColor="cream-100" id="video">
           <SectionHeading
             eyebrow="SAMPLE DEMO SESSION"
             title="See a Real Session in Action"
@@ -291,7 +350,7 @@ export default function ProgramPage() {
         </Section>
       )}
 
-      {/* 7. How to Join */}
+      {/* 8. How to Join */}
       <Section bgColor="blush-100" id="how-to-join">
         <SectionHeading
           eyebrow="EASY 5-STEP PROCESS"
@@ -315,7 +374,7 @@ export default function ProgramPage() {
         </div>
       </Section>
 
-      {/* 8. Enquiry CTA Form */}
+      {/* 9. Enquiry CTA Form */}
       <Section bgColor="cream-50" id="enquire">
         <SectionHeading
           eyebrow="START YOUR JOURNEY"
