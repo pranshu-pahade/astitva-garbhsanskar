@@ -16,7 +16,7 @@ export const translations = {
       title: "A calm, trusted home for the Garbhsanskar journey.",
       subtitle:
         "Nurturing you and your baby with Yoga, Mantra, Vaidik Sanskars and expert guidance – from pregnancy to 2 years of your baby's life.",
-      trust: "150+ mothers guided · 32 currently active",
+      trust: "500+ mothers guided · 50+ currently active",
       tagline: "स्वप्नातील बाळ सत्यात",
       taglineEn: "turning the baby of your dreams into reality",
     },
@@ -25,9 +25,9 @@ export const translations = {
       liveZoomSub: "Real-time sessions",
       dailyBatches: "3 Daily Batches",
       dailyBatchesSub: "45 min | 6 Sundays off",
-      mothersGuided: "150+ Mothers",
+      mothersGuided: "500+ Mothers",
       mothersGuidedSub: "Completed",
-      activeStudents: "32 Active",
+      activeStudents: "50+ Active",
       activeStudentsSub: "Students",
     },
     whatIs: {
@@ -112,7 +112,7 @@ export const translations = {
       title: "गर्भसंस्कार प्रवासासाठी एक शांत, विश्वासू घर.",
       subtitle:
         "योगासने, मंत्रपठण, वैदिक संस्कार आणि तज्ज्ञ मार्गदर्शनाने — गर्भधारणेपासून बाळाच्या २ वर्षांपर्यंत तुमची आणि बाळाची उत्तम काळजी.",
-      trust: "१५०+ मातांना यशस्वी मार्गदर्शन · ३२ सध्या सक्रिय माता",
+      trust: "५००+ मातांना यशस्वी मार्गदर्शन · ५०+ सध्या सक्रिय माता",
       tagline: "स्वप्नातील बाळ सत्यात",
       taglineEn: "तुमच्या स्वप्नातील बाळाला सत्यात उतरवणे",
     },
@@ -121,9 +121,9 @@ export const translations = {
       liveZoomSub: "प्रत्यक्ष संवाद व उत्तरे",
       dailyBatches: "दररोज ३ बॅचेस",
       dailyBatchesSub: "४५ मिनिटे | रविवारी सुट्टी",
-      mothersGuided: "१५०+ माता",
+      mothersGuided: "५००+ माता",
       mothersGuidedSub: "पूर्ण मार्गदर्शन",
-      activeStudents: "३२ सक्रिय माता",
+      activeStudents: "५०+ सक्रिय माता",
       activeStudentsSub: "सध्या शिकत आहेत",
     },
     whatIs: {

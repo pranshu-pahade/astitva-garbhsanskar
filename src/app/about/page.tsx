@@ -6,7 +6,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { LeafDivider } from "@/components/ui/LeafDivider";
-import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About Us & Founders — Prajakta Dhamane & Minal Purkar",
@@ -61,7 +60,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            In July 2025, we established Astitva Garbhsanskar to share this gift with every expecting mother. Since then, we have personally guided over 150 mothers from their 3rd month of pregnancy all the way through delivery and newborn care.
+            In July 2025, we established Astitva Garbhsanskar to share this gift with every expecting mother. Since then, we have personally guided over 500 mothers from their 3rd month of pregnancy all the way through delivery and newborn care.
           </p>
         </div>
       </Section>

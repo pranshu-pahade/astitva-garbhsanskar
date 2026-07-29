@@ -45,7 +45,7 @@ export default async function ReviewsPage() {
             <span className="text-sm font-semibold text-[#36292E]">
               {totalCount > 0
                 ? `Based on ${totalCount} verified mother review${totalCount > 1 ? "s" : ""}`
-                : "5.0 Rating from 150+ mothers guided"}
+                : "5.0 Rating from 500+ mothers guided"}
             </span>
           </div>
         </div>
