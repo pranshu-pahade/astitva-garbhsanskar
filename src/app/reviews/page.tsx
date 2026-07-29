@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { WhatsAppLightbox } from "@/components/reviews/WhatsAppLightbox";
+import { LocalVideoReview } from "@/components/reviews/LocalVideoReview";
 import { ReviewForm } from "@/components/forms/ReviewForm";
 import { getApprovedReviewsServer } from "@/lib/reviews-data";
 
@@ -12,7 +13,7 @@ export const revalidate = 60; // Revalidate every 60s
 export const metadata: Metadata = {
   title: "Mother Reviews & Testimonials — Astitva Garbhsanskar",
   description:
-    "Read authentic reviews and WhatsApp messages from mothers who guided their pregnancy with Prajakta & Minal.",
+    "Read authentic reviews, watch video testimonials, and view WhatsApp messages from mothers who guided their pregnancy with Prajakta & Minal.",
 };
 
 export default async function ReviewsPage() {
@@ -51,8 +52,22 @@ export default async function ReviewsPage() {
         </div>
       </Section>
 
-      {/* WhatsApp Screenshots Section - PLACED ABOVE WRITTEN REVIEWS */}
-      <Section bgColor="cream-50" id="whatsapp-screenshots" className="pt-16">
+      {/* Video Review Section */}
+      <Section bgColor="cream-50" id="video-review" className="pt-16 pb-12">
+        <SectionHeading
+          eyebrow="MOTHER VIDEO TESTIMONIAL"
+          title="Watch a Real Mother's Experience"
+          subtitle="Hear directly from an expecting mother about her personal journey with Astitva Garbhsanskar."
+        />
+
+        <LocalVideoReview
+          videoSrc="/videos/mother_review.mp4"
+          motherName="Mother's Personal Experience"
+        />
+      </Section>
+
+      {/* WhatsApp Screenshots Section */}
+      <Section bgColor="cream-100" id="whatsapp-screenshots" className="py-16">
         <SectionHeading
           eyebrow="UNFILTERED HAPPINESS"
           title="Straight from our mothers' phones"
@@ -63,7 +78,7 @@ export default async function ReviewsPage() {
       </Section>
 
       {/* Written Reviews Grid */}
-      <Section bgColor="cream-100" id="written-reviews">
+      <Section bgColor="cream-50" id="written-reviews">
         <SectionHeading
           eyebrow="DETAILED EXPERIENCES"
           title="Written Reviews"
@@ -128,7 +143,7 @@ export default async function ReviewsPage() {
       </Section>
 
       {/* Submission Form Section */}
-      <Section bgColor="cream-50" id="share-experience">
+      <Section bgColor="cream-100" id="share-experience">
         <SectionHeading
           eyebrow="YOUR VOICE MATTERS"
           title="Share Your Experience"
