@@ -19,33 +19,34 @@ export const WhatIsGarbhsanskarSection: React.FC = () => {
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           <SectionHeading
             eyebrow={t.whatIs.eyebrow}
-            title="What is Garbhsanskar?"
+            title={t.whatIs.title}
             align="left"
             className="mb-6"
           />
 
           <p className="text-lg sm:text-xl text-[#36292E] leading-relaxed mb-6">
-            Garbhsanskar is the science of nurturing the baby in the womb with positive thoughts, emotions, and values through Yoga, Mantra, Ayurveda and Vaidik Sanskars.
+            {t.whatIs.para1}
           </p>
 
           <p className="text-base sm:text-lg text-[#36292E] opacity-90 leading-relaxed mb-8">
-            During pregnancy, a mother's mental state directly shapes her baby's brain cells, temperament, and immunity. At Astitva, we make this ancient journey simple, joyful, and deeply personal for modern pregnant women.
+            {t.whatIs.para2}
           </p>
 
           <Button href="/program" variant="primary" size="md">
-            Know More
+            {t.whatIs.knowMore}
           </Button>
         </div>
 
-        {/* Right Column: Soft Framed Image */}
+        {/* Right Column: Custom Garbhsanskar Activities Image Collage */}
         <div className="lg:col-span-5 flex justify-center relative">
-          <div className="relative w-full max-w-[380px] aspect-square rounded-[36px] overflow-hidden shadow-warm-lg border-4 border-[#FFF6EE] bg-[#FCECE9]">
+          <div className="relative w-full max-w-[380px] aspect-[2/3] rounded-[28px] overflow-hidden shadow-warm-lg border-4 border-[#FFF6EE] bg-[#FCECE9]">
             <Image
-              src="/images/pooja.webp"
-              alt="Pregnant mother embracing her baby with Garbhsanskar"
+              src="/images/garbhsanskar_activities.webp"
+              alt="Garbhsanskar activities collage - Meditation, Yoga, Pranayam, and Art Therapy"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 380px"
+              priority
             />
           </div>
         </div>
