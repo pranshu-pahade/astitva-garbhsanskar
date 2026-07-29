@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { LeafDivider } from "@/components/ui/LeafDivider";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About Us & Founders — Prajakta Dhamane & Minal Purkar",
