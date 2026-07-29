@@ -13,8 +13,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
 
   const differences = [
     {
-      title: "Live, Not Recorded",
-      subtitle: "Real-time sessions with immediate answers",
+      title: t.difference.d1Title,
+      subtitle: t.difference.d1Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -25,8 +25,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: "1-to-1 Attention",
-      subtitle: "Direct guidance from the founders",
+      title: t.difference.d2Title,
+      subtitle: t.difference.d2Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -37,8 +37,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: "Expert-Led & Qualified",
-      subtitle: "M.A. Yogashastra, MSc, Medical Yoga Therapist",
+      title: t.difference.d3Title,
+      subtitle: t.difference.d3Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -49,8 +49,8 @@ export const AstitvaDifferenceSection: React.FC = () => {
       ),
     },
     {
-      title: "The Full Journey",
-      subtitle: "Pregnancy to 2 years of baby care with Vaidik Sanskars",
+      title: t.difference.d4Title,
+      subtitle: t.difference.d4Desc,
       icon: (
         <path
           strokeLinecap="round"
@@ -65,9 +65,9 @@ export const AstitvaDifferenceSection: React.FC = () => {
   return (
     <Section bgColor="cream-50" id="difference">
       <SectionHeading
-        eyebrow="WHY MOTHERS TRUST US"
-        title="Why Choose Astitva?"
-        subtitle="We aren't a high-volume app or recorded course. We are two founder-teachers guiding you personally every morning and evening."
+        eyebrow={t.difference.eyebrow}
+        title={t.difference.title}
+        subtitle={t.difference.subtitle}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

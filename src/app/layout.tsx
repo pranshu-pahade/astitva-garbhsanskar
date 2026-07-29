@@ -77,7 +77,7 @@ export default function RootLayout({
       {
         "@type": "Person",
         name: "Minal Purkar",
-        jobTitle: "MSc, Certified Garbhsanskar Educator",
+        jobTitle: "Diploma in Garbhsanskar, Certified Garbhsanskar Educator",
       },
     ],
     address: {

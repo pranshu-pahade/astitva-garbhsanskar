@@ -124,7 +124,7 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 <span className="px-3 py-1 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs font-bold">
-                  MSc Qualified
+                  Diploma in Garbhsanskar
                 </span>
                 <span className="px-3 py-1 rounded-full bg-[#E2EAD8] text-[#8E2B5C] text-xs font-bold">
                   Certified Garbhsanskar Educator

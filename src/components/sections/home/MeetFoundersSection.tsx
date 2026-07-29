@@ -14,7 +14,7 @@ export const MeetFoundersSection: React.FC = () => {
 
   const credentials = [
     "M.A. Yogashastra",
-    "MSc Qualified",
+    "Diploma in Garbhsanskar",
     "Medical Yoga Therapist",
     "Certified Garbhsanskar Educator",
   ];
