@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -7,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { LeafDivider } from "@/components/ui/LeafDivider";
 import { siteConfig } from "@/lib/site-config";
+import { FoundersMediaCard } from "@/components/founders/FoundersMediaCard";
 
 export const metadata: Metadata = {
   title: "About Us & Founders — Prajakta Dhamane & Minal Purkar",
@@ -75,18 +75,8 @@ export default function AboutPage() {
         />
 
         <div className="max-w-4xl mx-auto flex flex-col items-center">
-          {/* ONE Shared Photo */}
-          <div className="relative w-full max-w-[450px] aspect-[679/906] rounded-[24px] overflow-hidden shadow-warm-lg border-4 border-[#FFF6EE] mb-12">
-            <div className="absolute inset-0 bg-[#F3B6B2] rounded-[24px] transform rotate-2 -z-10" />
-            <Image
-              src="/images/founders.webp"
-              alt="Prajakta Dhamane and Minal Purkar together in sarees"
-              fill
-              className="object-cover object-top"
-              priority
-              sizes="(max-width: 768px) 100vw, 450px"
-            />
-          </div>
+          {/* Interactive Founders Photo & Video Card */}
+          <FoundersMediaCard initialMode="video" className="mb-12" />
 
           {/* Two Name Blocks Side by Side on Desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">

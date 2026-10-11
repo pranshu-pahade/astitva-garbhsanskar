@@ -54,6 +54,10 @@ export const translations = {
       narrative:
         "Astitva Garbhasanskar was born out of our own family's pregnancy journey. During my M.A. in Yogashastra, I also conducted research involving 50+ pregnant women, which helped me gain deeper insights into their experiences and needs during pregnancy. We combine authentic Vaidik sanskars with scientific medical yoga therapy so every mother feels supported, understood, and deeply connected to her baby. As two women founders, we personally lead every single session.",
       readStory: "Read Our Full Story",
+      watchVideo: "Watch Founders' Video",
+      videoCaption: "Listen to Prajakta & Minal explain Astitva Garbhsanskar",
+      tabPhoto: "Photo",
+      tabVideo: "Watch Video",
     },
     glimpse: {
       eyebrow: "INSIDE OUR DAILY SESSIONS",
@@ -165,6 +169,10 @@ export const translations = {
       narrative:
         "अस्तित्व गर्भसंस्कारची सुरुवात आमच्या स्वतःच्या कौटुंबिक अनुभवातून झाली. एम.ए. योगशास्त्रादरम्यान मी ५०+ गर्भवती महिलांवर विशेष संशोधन केले, ज्यामुळे गर्भधारणेदरम्यान त्यांच्या गरजा आणि भावना अधिक सखोलतेने समजून घेण्यास मदत झाली. आम्ही वैदिक संस्कार आणि वैद्यकीय योग थेरपीचा सुरेख संगम घडवतो. दोन्ही संस्थापक शिक्षिका म्हणून आम्ही स्वतः प्रत्येक सत्र लाइव्ह घेतो.",
       readStory: "आमची संपूर्ण कहाणी वाचा",
+      watchVideo: "संस्थापकांचा व्हिडिओ पहा",
+      videoCaption: "प्राजक्ता आणि मीनल यांच्याकडून अस्तित्व गर्भसंस्कारबद्दल जाणून घ्या",
+      tabPhoto: "फोटो",
+      tabVideo: "व्हिडिओ पहा",
     },
     glimpse: {
       eyebrow: "दैनंदिन सत्रांची झलक",
